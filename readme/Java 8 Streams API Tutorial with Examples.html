@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/ -->
+<html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/1.txt"></script><script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/1(1).txt"></script><script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/moatframe.js.download"></script>
+	
+	<meta name="viewport" content="width=device-width">
+        <meta name="yandex-verification" content="7a1d702a7c0932b1">
+        <meta name="alexaVerifyID" content="XJaVCTtTDEk0MyhgfOgd9tTjE9w">
+        <meta name="p:domain_verify" content="ea9f7b0573ccfb95c094239389927a33">
+        <meta name="msvalidate.01" content="8AF7439F627034813D0CF226F8294F65">
+        <meta name="wot-verification" content="402455077685997b9b9f">
+		<meta name="google-site-verification" content="ajpeLD7lTPqD1NgnJfy2rM1GTf8pcOopcSccJENTaG0">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<div class="fit-vids-style" id="fit-vids-style" style="display: none;">­<style>.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></div><script src="./Java 8 Streams API Tutorial with Examples_files/osd.js.download"></script><script src="./Java 8 Streams API Tutorial with Examples_files/f.txt" id="google_shimpl"></script><script async="" src="./Java 8 Streams API Tutorial with Examples_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-47932909-1');
+</script>
+
+	
+<!-- google page ad script - added 20th May 2016 -->
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4674758778510710",
+    enable_page_level_ads: true
+  });
+</script>
+
+<!-- Write your comments here -->
+	<title>Java 8 Streams API Tutorial with Examples</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.javabrahman.com/xmlrpc.php">
+        <link href="./Java 8 Streams API Tutorial with Examples_files/css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="https://www.javabrahman.com/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	
+	<!-- This site is optimized with the Yoast SEO plugin v15.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Java 8 Streams API Tutorial with examples explains the fundamentals of streams including their definition, explanation of important Streams concepts in the definition, and a basic Streams example showing their usage in code.">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Java 8 Streams API Tutorial with Examples">
+	<meta property="og:description" content="Java 8 Streams API Tutorial with examples explains the fundamentals of streams including their definition, explanation of important Streams concepts in the definition, and a basic Streams example showing their usage in code.">
+	<meta property="og:url" content="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/">
+	<meta property="og:site_name" content="JavaBrahman">
+	<meta property="article:publisher" content="https://www.facebook.com/javabrahman">
+	<meta property="article:published_time" content="2015-10-09T09:46:03+00:00">
+	<meta property="article:modified_time" content="2019-09-17T05:09:40+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Java 8 Streams API Tutorial with Examples">
+	<meta name="twitter:description" content="Java 8 Streams API Tutorial with examples explains the fundamentals of streams including their definition, explanation of important Streams concepts in the definition, and a basic Streams example showing their usage in code.">
+	<meta name="twitter:image" content="https://www.javabrahman.com/wp-content/uploads/Java8StreamsAPI208By208-.jpg">
+	<meta name="twitter:creator" content="@javabrahman">
+	<meta name="twitter:site" content="@javabrahman">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.javabrahman.com/#website","url":"https://www.javabrahman.com/","name":"JavaBrahman","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.javabrahman.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#primaryimage","inLanguage":"en-US","url":"https://www.javabrahman.com/wp-content/uploads/Java8StreamsAPI208By208-.jpg","width":208,"height":208},{"@type":"WebPage","@id":"https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#webpage","url":"https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/","name":"Java 8 Streams API Tutorial with Examples","isPartOf":{"@id":"https://www.javabrahman.com/#website"},"primaryImageOfPage":{"@id":"https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#primaryimage"},"datePublished":"2015-10-09T09:46:03+00:00","dateModified":"2019-09-17T05:09:40+00:00","author":{"@id":"https://www.javabrahman.com/#/schema/person/ce5de9e5bb827247f02a4719d61a433a"},"description":"Java 8 Streams API Tutorial with examples explains the fundamentals of streams including their definition, explanation of important Streams concepts in the definition, and a basic Streams example showing their usage in code.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/"]}]},{"@type":"Person","@id":"https://www.javabrahman.com/#/schema/person/ce5de9e5bb827247f02a4719d61a433a","name":"admin","image":{"@type":"ImageObject","@id":"https://www.javabrahman.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/c07d116364b7653fa45c8e7ad50dd561?s=96&d=mm&r=g","caption":"admin"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="JavaBrahman » Feed" href="https://www.javabrahman.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="JavaBrahman » Comments Feed" href="https://www.javabrahman.com/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.javabrahman.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Java 8 Streams API Tutorial with Examples_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="twentyfourteen-jetpack-css" href="./Java 8 Streams API Tutorial with Examples_files/twentyfourteen.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="./Java 8 Streams API Tutorial with Examples_files/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="wp-block-library-theme-css" href="./Java 8 Streams API Tutorial with Examples_files/theme.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="./Java 8 Streams API Tutorial with Examples_files/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="dgd-scrollbox-plugin-core-css" href="./Java 8 Streams API Tutorial with Examples_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="widgetopts-styles-css" href="./Java 8 Streams API Tutorial with Examples_files/widget-options.css" type="text/css" media="all">
+<link rel="stylesheet" id="chld_thm_cfg_parent-css" href="./Java 8 Streams API Tutorial with Examples_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-lato-css" href="./Java 8 Streams API Tutorial with Examples_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./Java 8 Streams API Tutorial with Examples_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-style-css" href="./Java 8 Streams API Tutorial with Examples_files/style(2).css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-block-style-css" href="./Java 8 Streams API Tutorial with Examples_files/blocks.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='https://www.javabrahman.com/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="addthis_all_pages-css" href="./Java 8 Streams API Tutorial with Examples_files/addthis_wordpress_public.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="__EPYT__style-css" href="./Java 8 Streams API Tutorial with Examples_files/ytprefs.min.css" type="text/css" media="all">
+<style id="__EPYT__style-inline-css" type="text/css">
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style>
+<link rel="stylesheet" id="jetpack_css-css" href="./Java 8 Streams API Tutorial with Examples_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/jquery.js.download" id="jquery-core-js"></script>
+<script type="text/javascript" id="copyright_proof_live-js-extra">
+/* <![CDATA[ */
+var dprv_js_bridge = {"record_IP":"off","site_url":"https:\/\/www.javabrahman.com","ajax_url":"https:\/\/www.javabrahman.com\/wp-admin\/admin-ajax.php","noRightClickMessage":"","attributeCaption":"Attributions - owner(s) of some content"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/copyright_proof_live.js.download" id="copyright_proof_live-js"></script>
+<script type="text/javascript" id="dgd-scrollbox-plugin-js-extra">
+/* <![CDATA[ */
+var $DGD = {"ajaxurl":"\/wp-admin\/admin-ajax.php","nonce":"e400ae0b86","debug":"","permalink":"https:\/\/www.javabrahman.com\/java-8\/java-8-streams-api-tutorial-with-examples\/","title":"Java 8 Streams API Tutorial with Examples","thumbnail":"https:\/\/www.javabrahman.com\/wp-content\/uploads\/Java8StreamsAPI208By208-.jpg","scripthost":"\/wp-content\/plugins\/dreamgrow-scroll-triggered-box\/","scrollboxes":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/script.js.download" id="dgd-scrollbox-plugin-js"></script>
+<script type="text/javascript" id="__ytprefs__-js-extra">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/www.javabrahman.com\/wp-admin\/admin-ajax.php","security":"a3fc5c06b6","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.javabrahman.com\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/www.javabrahman.com\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs__\",\"iframe[src*='youtube.com']\",\"iframe[src*='youtube-nocookie.com']\",\"iframe[data-ep-src*='youtube.com']\",\"iframe[data-ep-src*='youtube-nocookie.com']\",\"iframe[data-ep-gallerysrc*='youtube.com']\"]","epdovol":"1","version":"13.4.1.1","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/ytprefs.min.js.download" id="__ytprefs__-js"></script>
+<link rel="https://api.w.org/" href="https://www.javabrahman.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.javabrahman.com/wp-json/wp/v2/posts/1199"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.javabrahman.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.javabrahman.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.5.1">
+<link rel="shortlink" href="https://www.javabrahman.com/?p=1199">
+<link rel="alternate" type="application/json+oembed" href="https://www.javabrahman.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.javabrahman.com%2Fjava-8%2Fjava-8-streams-api-tutorial-with-examples%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.javabrahman.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.javabrahman.com%2Fjava-8%2Fjava-8-streams-api-tutorial-with-examples%2F&amp;format=xml">
+	<style type="text/css">	.dprv{border-collapse:collapse;border-spacing:0px;border:0px;border-style:solid;padding:0px;}
+									.dprv tr td{border:0px;padding:0px;}
+			</style><style id="fourteen-colors" type="text/css">/* Custom Contrast Color */
+		.site:before,
+		#secondary,
+		.site-header,
+		.site-footer,
+		.menu-toggle,
+		.featured-content,
+		.featured-content .entry-header,
+		.slider-direction-nav a,
+		.ie8 .featured-content,
+		.ie8 .site:before,
+		.has-black-background-color {
+			background-color: #e6a94f;
+		}
+
+		.has-black-color {
+			color: #e6a94f;
+		}
+
+		.grid .featured-content .entry-header,
+		.ie8 .grid .featured-content .entry-header {
+			border-color: #e6a94f;
+		}
+
+		.slider-control-paging a:before {
+			background-color: rgba(255,255,255,.33);
+		}
+
+		.hentry .mejs-mediaelement,
+		.widget .mejs-mediaelement,
+ 		.hentry .mejs-container .mejs-controls,
+ 		.widget .mejs-container .mejs-controls {
+			background: #e6a94f;
+		}
+
+		/* Player controls need separation from the contrast background */
+		.primary-sidebar .mejs-controls,
+		.site-footer .mejs-controls {
+			border: 1px solid;
+		}
+		
+			.site-description,
+			.secondary-navigation a,
+			.widget,
+			.widget a,
+			.widget-title,
+			.widget-title a,
+			.widget_calendar caption,
+			.site-header a,
+			.site-title a,
+			.site-title a:hover,
+			.menu-toggle:before,
+			.site-footer,
+			.site-footer a,
+			.featured-content a,
+			.featured-content .entry-meta,
+			.slider-direction-nav a:before,
+			.hentry .mejs-container .mejs-controls .mejs-time span,
+			.widget .mejs-container .mejs-controls .mejs-time span,
+			.hentry .mejs-controls .mejs-button button,
+			.widget .mejs-controls .mejs-button button {
+				color: #2b2b2b;
+			}
+
+			@media screen and (min-width: 783px) {
+				.primary-navigation ul ul a {
+					color: #fff;
+				}
+			}
+
+			@media screen and (min-width: 1008px) {
+				.secondary-navigation ul ul a,
+				.secondary-navigation li:hover > a,
+				.secondary-navigation li.focus > a {
+					color: #fff;
+				}
+			}
+
+			.widget_calendar tbody a,
+			.site-footer .widget_calendar tbody a,
+			.slider-direction-nav a:hover:before {
+				color: #fff;
+			}
+
+			.slider-control-paging a:before {
+				background-color: rgba(0, 0, 0, .33);
+			}
+
+			.featured-content {
+				background-image: url(http://34.69.148.76/wp-content/plugins/fourteen-colors/pattern-dark-inverse.svg);
+			}
+
+			.site-navigation li,
+			#secondary,
+			.secondary-navigation,
+			.secondary-navigation li,
+			.widget table,
+			.widget th,
+			.widget td,
+			.widget_archive li,
+			.widget_categories li,
+			.widget_links li,
+			.widget_meta li,
+			.widget_nav_menu li,
+			.widget_pages li,
+			.widget_recent_comments li,
+			.widget_recent_entries li,
+			.widget_text li,
+			.widget_categories li ul,
+			.widget_nav_menu li ul,
+			.widget_pages li ul,
+			.widget_text li ul,
+			.widget abbr[title] {
+				border-color: rgba(0, 0, 0, .2);
+			}
+
+			.widget input,
+			.widget textarea {
+				background-color: rgba(0, 0, 0, .02);
+				border-color: rgba(0, 0, 0, .2);
+				color: #000;
+			}
+
+			.widget input:focus, .widget textarea:focus {
+				border-color: rgba(0, 0, 0, 0.4);
+			}
+
+			.widget_twentyfourteen_ephemera .entry-meta a {
+				color: rgba(0, 0, 0, 0.7);
+			}
+
+			.widget_twentyfourteen_ephemera > ol > li {
+				border-bottom-color: rgba(0, 0, 0, 0.2);
+			}
+
+			#supplementary + .site-info {
+				border-top: 1px solid rgba(0, 0, 0, 0.2);
+			}
+
+			.hentry .mejs-controls .mejs-time-rail .mejs-time-total,
+			.widget .mejs-controls .mejs-time-rail .mejs-time-total,
+			.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+			.widget .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+				background: rgba(0,0,0,.3);
+			}
+
+			.hentry .mejs-controls .mejs-time-rail .mejs-time-loaded,
+			.widget .mejs-controls .mejs-time-rail .mejs-time-loaded,
+			.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+			.widget .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+				background-color: #2b2b2b;
+			}
+
+			/* Override the site title color option with an over-qualified selector, as the option is hidden. */
+			h1.site-title a {
+				color: #2b2b2b;
+			}
+		
+		.menu-toggle:active,
+		.menu-toggle:focus,
+		.menu-toggle:hover {
+			background-color: #ffed93;
+		}
+		/* Custom accent color. */
+		button,
+		.button,
+		.contributor-posts-link,
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"],
+		.search-toggle,
+		.hentry .mejs-controls .mejs-time-rail .mejs-time-current,
+		.widget .mejs-controls .mejs-time-rail .mejs-time-current,
+		.hentry .mejs-overlay:hover .mejs-overlay-button,
+		.widget .mejs-overlay:hover .mejs-overlay-button,
+		.widget button,
+		.widget .button,
+		.widget input[type="button"],
+		.widget input[type="reset"],
+		.widget input[type="submit"],
+		.widget_calendar tbody a,
+		.content-sidebar .widget input[type="button"],
+		.content-sidebar .widget input[type="reset"],
+		.content-sidebar .widget input[type="submit"],
+		.slider-control-paging .slider-active:before,
+		.slider-control-paging .slider-active:hover:before,
+		.slider-direction-nav a:hover,
+		.ie8 .primary-navigation ul ul,
+		.ie8 .secondary-navigation ul ul,
+		.ie8 .primary-navigation li:hover > a,
+		.ie8 .primary-navigation li.focus > a,
+		.ie8 .secondary-navigation li:hover > a,
+		.ie8 .secondary-navigation li.focus > a,
+		.wp-block-file .wp-block-file__button,
+		.wp-block-button__link,
+		.has-green-background-color {
+			background-color: #e5bd80;
+		}
+
+		.site-navigation a:hover,
+		.is-style-outline .wp-block-button__link:not(.has-text-color),
+		.has-green-color {
+			color: #e5bd80;
+		}
+
+		::-moz-selection {
+			background: #e5bd80;
+		}
+
+		::selection {
+			background: #e5bd80;
+		}
+
+		.paging-navigation .page-numbers.current {
+			border-color: #e5bd80;
+		}
+
+		@media screen and (min-width: 782px) {
+			.primary-navigation li:hover > a,
+			.primary-navigation li.focus > a,
+			.primary-navigation ul ul {
+				background-color: #e5bd80;
+			}
+		}
+
+		@media screen and (min-width: 1008px) {
+			.secondary-navigation li:hover > a,
+			.secondary-navigation li.focus > a,
+			.secondary-navigation ul ul {
+				background-color: #e5bd80;
+			}
+		}
+	
+			.contributor-posts-link,
+			.button,
+			button,
+			input[type="button"],
+			input[type="reset"],
+			input[type="submit"],
+			.search-toggle:before,
+			.hentry .mejs-overlay:hover .mejs-overlay-button,
+			.widet .mejs-overlay:hover .mejs-overlay-button,
+			.widget button,
+			.widget .button,
+			.widget input[type="button"],
+			.widget input[type="reset"],
+			.widget input[type="submit"],
+			.widget_calendar tbody a,
+			.widget_calendar tbody a:hover,
+			.site-footer .widget_calendar tbody a,
+			.content-sidebar .widget input[type="button"],
+			.content-sidebar .widget input[type="reset"],
+			.content-sidebar .widget input[type="submit"],
+			button:hover,
+			button:focus,
+			.button:hover,
+			.button:focus,
+			.widget a.button:hover,
+			.widget a.button:focus,
+			.widget a.button:active,
+			.content-sidebar .widget a.button,
+			.content-sidebar .widget a.button:hover,
+			.content-sidebar .widget a.button:focus,
+			.content-sidebar .widget a.button:active,
+			.contributor-posts-link:hover,
+			.contributor-posts-link:active,
+			input[type="button"]:hover,
+			input[type="button"]:focus,
+			input[type="reset"]:hover,
+			input[type="reset"]:focus,
+			input[type="submit"]:hover,
+			input[type="submit"]:focus,
+			.slider-direction-nav a:hover:before,
+			.ie8 .primary-navigation li:hover > a,
+			.ie8 .primary-navigation li.focus > a,
+			.ie8 .secondary-navigation li:hover > a,
+			.ie8 .secondary-navigation li.focus > a,
+			.is-style-outline .wp-block-button__link:not(.has-text-color):hover,
+			.is-style-outline .wp-block-button__link:not(.has-text-color):focus,
+			.wp-block-button__link {
+				color: #2b2b2b;
+			}
+
+			@media screen and (min-width: 782px) {
+				.site-navigation li .current_page_item > a,
+				.site-navigation li .current_page_ancestor > a,
+				.site-navigation li .current-menu-item > a,
+				.site-navigation li .current-menu-ancestor > a,
+				.primary-navigation ul ul a,
+				.primary-navigation li:hover > a,
+				.primary-navigation li.focus > a,
+				.primary-navigation ul ul {
+					color: #2b2b2b;
+				}
+			}
+
+			@media screen and (min-width: 1008px) {
+				.secondary-navigation ul ul a,
+				.secondary-navigation li:hover > a,
+				.secondary-navigation li.focus > a,
+				.secondary-navigation ul ul {
+					color: #2b2b2b;
+				}
+			}
+
+			::selection {
+				color: #2b2b2b;
+			}
+
+			::-moz-selection {
+				color: #2b2b2b;
+			}
+
+			.hentry .mejs-controls .mejs-time-rail .mejs-time-loaded,
+			.widget .mejs-controls .mejs-time-rail .mejs-time-loaded {
+				background-color: #2b2b2b;
+			}
+
+		
+		/* Generated variants of custom accent color. */
+		a,
+		.content-sidebar .widget a {
+			color: #956d30;
+		}
+
+		.contributor-posts-link:hover,
+		.button:hover,
+		.button:focus,
+		.slider-control-paging a:hover:before,
+		.search-toggle:hover,
+		.search-toggle.active,
+		.search-box,
+		.widget_calendar tbody a:hover,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.widget button:hover,
+		.widget .button:hover,
+		.widget button:focus,
+		.widget .button:focus,
+		.widget input[type="button"]:hover,
+		.widget input[type="button"]:focus,
+		.widget input[type="reset"]:hover,
+		.widget input[type="reset"]:focus,
+		.widget input[type="submit"]:hover,
+		.widget input[type="submit"]:focus,
+		.content-sidebar .widget input[type="button"]:hover,
+		.content-sidebar .widget input[type="button"]:focus,
+		.content-sidebar .widget input[type="reset"]:hover,
+		.content-sidebar .widget input[type="reset"]:focus,
+		.content-sidebar .widget input[type="submit"]:hover,
+		.content-sidebar .widget input[type="submit"]:focus,
+		.ie8 .primary-navigation ul ul a:hover,
+		.ie8 .primary-navigation ul ul li.focus > a,
+		.ie8 .secondary-navigation ul ul a:hover,
+		.ie8 .secondary-navigation ul ul li.focus > a,
+		.wp-block-file .wp-block-file__button:hover,
+		.wp-block-file .wp-block-file__button:focus,
+		.wp-block-button__link:not(.has-text-color):hover,
+		.wp-block-button__link:not(.has-text-color):focus,
+		.is-style-outline .wp-block-button__link:not(.has-text-color):hover,
+		.is-style-outline .wp-block-button__link:not(.has-text-color):focus {
+			background-color: #ffda9d;
+		}
+
+		.featured-content a:hover,
+		.featured-content .entry-title a:hover,
+		.widget a:hover,
+		.widget-title a:hover,
+		.widget_twentyfourteen_ephemera .entry-meta a:hover,
+		.hentry .mejs-controls .mejs-button button:hover,
+		.widget .mejs-controls .mejs-button button:hover,
+		.site-info a:hover,
+		.featured-content a:hover,
+		.wp-block-latest-comments_comment-meta a:hover,
+		.wp-block-latest-comments_comment-meta a:focus {
+			color: #ffda9d;
+		}
+
+		a:active,
+		a:hover,
+		.entry-title a:hover,
+		.entry-meta a:hover,
+		.cat-links a:hover,
+		.entry-content .edit-link a:hover,
+		.post-navigation a:hover,
+		.image-navigation a:hover,
+		.comment-author a:hover,
+		.comment-list .pingback a:hover,
+		.comment-list .trackback a:hover,
+		.comment-metadata a:hover,
+		.comment-reply-title small a:hover,
+		.content-sidebar .widget a:hover,
+		.content-sidebar .widget .widget-title a:hover,
+		.content-sidebar .widget_twentyfourteen_ephemera .entry-meta a:hover {
+			color: #b28a4d;
+		}
+
+		.page-links a:hover,
+		.paging-navigation a:hover {
+			border-color: #b28a4d;
+		}
+
+		.entry-meta .tag-links a:hover:before {
+			border-right-color: #b28a4d;
+		}
+
+		.page-links a:hover,
+		.entry-meta .tag-links a:hover {
+			background-color: #b28a4d;
+		}
+
+		@media screen and (min-width: 782px) {
+			.primary-navigation ul ul a:hover,
+			.primary-navigation ul ul li.focus > a {
+				background-color: #ffda9d;
+			}
+		}
+
+		@media screen and (min-width: 1008px) {
+			.secondary-navigation ul ul a:hover,
+			.secondary-navigation ul ul li.focus > a {
+				background-color: #ffda9d;
+			}
+		}
+
+		button:active,
+		.button:active,
+		.contributor-posts-link:active,
+		input[type="button"]:active,
+		input[type="reset"]:active,
+		input[type="submit"]:active,
+		.widget input[type="button"]:active,
+		.widget input[type="reset"]:active,
+		.widget input[type="submit"]:active,
+		.content-sidebar .widget input[type="button"]:active,
+		.content-sidebar .widget input[type="reset"]:active,
+		.content-sidebar .widget input[type="submit"]:active,
+		.wp-block-file .wp-block-file__button:active,
+		.wp-block-button__link:active {
+			background-color: #ffeeb1;
+		}
+
+		.site-navigation .current_page_item > a,
+		.site-navigation .current_page_ancestor > a,
+		.site-navigation .current-menu-item > a,
+		.site-navigation .current-menu-ancestor > a {
+			color: #ffeeb1;
+		}
+	
+		/* Higher contrast Accent Color against contrast color */
+		.site-navigation .current_page_item > a,
+		.site-navigation .current_page_ancestor > a,
+		.site-navigation .current-menu-item > a,
+		.site-navigation .current-menu-ancestor > a,
+		.site-navigation a:hover,
+		.featured-content a:hover,
+		.featured-content .entry-title a:hover,
+		.widget a:hover,
+		.widget-title a:hover,
+		.widget_twentyfourteen_ephemera .entry-meta a:hover,
+		.hentry .mejs-controls .mejs-button button:hover,
+		.widget .mejs-controls .mejs-button button:hover,
+		.site-info a:hover,
+		.featured-content a:hover {
+			color: #7d5518;
+		}
+
+		.hentry .mejs-controls .mejs-time-rail .mejs-time-current,
+		.widget .mejs-controls .mejs-time-rail .mejs-time-current,
+		.slider-control-paging a:hover:before,
+		.slider-control-paging .slider-active:before,
+		.slider-control-paging .slider-active:hover:before {
+			background-color: #7d5518;
+		}
+	</style>    <style>
+	    .site-content .entry-header,.site-content .entry-content,.site-content .entry-summary,.site-content .entry-meta,.page-content, 
+		.comments-area,.post-navigation,.image-navigation,.page-header,.archive-header
+		{max-width: 774px;}
+	</style>
+    <style>@media screen and (min-width: 594px) {.site-content .has-post-thumbnail .entry-header{margin-top: 1px !important;}}
+		@media screen and (min-width: 846px) {.site-content .has-post-thumbnail .entry-header {margin-top: 1px !important;}}
+		@media screen and (min-width: 1040px) {.site-content .has-post-thumbnail .entry-header{margin-top: 1px !important;}}
+	</style>
+    <style>.site:before,#secondary{width:0;display:none;}.ie8 .site:before,.ie8 #secondary{width:0px;display:none;}
+	    .featured-content{padding-left:0;}.site-content,.site-main .widecolumn{margin-left:0;}.ie8 .site-content,.ie8 .site-main .widecolumn{margin-left:0;}
+		@media screen and (min-width: 1008px) {.search-box-wrapper{padding-left:0;}}
+		@media screen and (min-width: 1080px) {.search-box-wrapper,.featured-content{padding-left:0;}}
+		@media screen and (min-width: 1080px) {.grid-content{padding-left:0;}}
+	</style>
+    <style>
+	     .site-content .post-thumbnail{background:none;}.site-content a.post-thumbnail:hover{background-color:transparent;}
+	</style>
+<style type="text/css">img#wpstats{display:none}</style><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<link rel="icon" href="https://www.javabrahman.com/wp-content/uploads/cropped-cropped-ms-icon-310x310-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.javabrahman.com/wp-content/uploads/cropped-cropped-ms-icon-310x310-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.javabrahman.com/wp-content/uploads/cropped-cropped-ms-icon-310x310-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.javabrahman.com/wp-content/uploads/cropped-cropped-ms-icon-310x310-270x270.png">
+<style>
+</style>
+<link rel="preload" href="./Java 8 Streams API Tutorial with Examples_files/f(2).txt" as="script"><script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/f(2).txt"></script><link rel="preload" href="./Java 8 Streams API Tutorial with Examples_files/f(3).txt" as="script"><script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/f(3).txt"></script><link rel="stylesheet" type="text/css" href="./Java 8 Streams API Tutorial with Examples_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Java 8 Streams API Tutorial with Examples_files/shThemeEclipse.css"><script async="" type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/count.js.download"></script><style type="text/css">:root topadblock, :root script[src^="http://free-shoutbox.net/app/webroot/shoutbox/sb.php?shoutbox="] + #freeshoutbox_content, :root input[onclick^="window.open('http://www.FriendlyDuck.com/"], :root img[alt^="Fuckbook"], :root iframe[src^="http://static.mozo.com.au/strips/"], :root iframe[id^="google_ads_iframe"], :root div[jscontroller="U835zd"] + c-wiz[jsrenderer="YnuqN"], :root div[id^="zergnet-widget"], :root div[id^="traffective-ad-"], :root div[id^="sticky_ad_"], :root div[id^="q1-adset-"], :root div[id^="proadszone-"], :root div[id^="lazyad-"], :root div[id^="gtm-ad-"], :root div[id^="google_ads_iframe_"], :root div[id^="ezoic-pub-ad"], :root div[id^="dmRosAdWrapper"], :root div[id^="div-gpt-ad"], :root div[id^="div-adtech-ad-"], :root div[id^="dfp-slot-"], :root div[id^="dfp-ad-"], :root div[id^="block-views-topheader-ad-block-"], :root div[id^="advt-"], :root div[id^="advads_"], :root div[id^="ads300_600-widget"], :root input[onclick^="window.open('http://www.friendlyduck.com/"], :root div[id^="ads300_250-widget"], :root div[id^="ads300_100-widget"], :root div[id^="ads250_250-widget"], :root div[id^="ads120_600-widget"], :root div[id^="adrotate_widgets-"], :root div[id^="adfox_"], :root div[id^="ad_script_"], :root div[id^="ad_rect_"], :root div[id^="ad_position_"], :root div[id^="ad-server-"], :root div[id^="ad-cid-"], :root div[id^="acm-ad-tag-"], :root div[id^="YFBMSN"], :root div[id^="ADV-SLOT-"], :root div[data-spotim-slot], :root div[data-role="sidebarAd"], :root div[data-native_ad], :root div[data-mediatype="advertising"], :root div[data-id-advertdfpconf], :root div[data-flt-ve="sponsored_search_ads"], :root div[data-crl="true"][data-id^="CarouselPLA-"], :root div[data-adunit], :root div[data-adunit-path], :root div[class^="proadszone-"], :root div[class^="pane-google-admanager-"], :root div[class^="lifeOnwerAd"], :root iframe[name^="google_ads_iframe"], :root div[class^="largeRectangleAd_"], :root div[class^="index_adAfterContent_"], :root div[class^="block-openx-"], :root div[class^="backfill-taboola-home-slot-"], :root div[class^="advertisement-desktop"], :root div[class^="ads-partner-"], :root div[class^="adbanner_"], :root div[class^="ad_position_"], :root div[class^="SponsoredAds"], :root div[class^="ResponsiveAd-"], :root div[class^="PreAd_"], :root div[class^="Display_displayAd"], :root div[class^="BlockAdvert-"], :root div[class^="AdhesionAd_"], :root div[class^="Ad__bigBox"], :root div[class^="Ad__adContainer"], :root div[class^="ad_border_"], :root div[class^="AdItem-"], :root div[class*="_browserAdOuterContainer_"], :root div[class*="_AdInArticle_"], :root a[href^="http://axdsz.pro/"], :root a[href^="https://go.ebrokerserve.com/"], :root div[aria-label="Ads"], :root div > [class][onclick*=".updateAnalyticsEvents"], :root a[href*="/servlet/click/zone?"], :root c-wiz[jsrenderer="YnuqN"] > div > div > .Rn1jbe, :root bottomadblock, :root a[href^="http://c.actiondesk.com/"], :root aside[id^="div-gpt-ad"], :root aside[id^="adrotate_widgets-"], :root a[href^="https://ad.doubleclick.net/"], :root app-advertisement, :root amp-ad-custom, :root [id*="MGWrap"], :root ad-desktop-sidebar, :root a[style="display:block;width:300px;min-height:250px"][href^="http://li.cnet.com/click?"], :root div[id^="div-ads-"], :root a[href^="http://at.atwola.com/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="//adbit.co/?a=Advertise&"], :root a[href^="http://popup.taboola.com/"], :root a[href^="https://fast-redirecting.com/"], :root a[onmousedown^="this.href='/wp-content/embed-ad-content/"], :root div[role="navigation"] + c-wiz > script + div > .kxhcC, :root a[onclick*="//m.economictimes.com/etmack/click.htm"], :root a[href^="https://see.kmisln.com/"], :root a[href^="https://www.travelzoo.com/oascampaignclick/"], :root a[href^="https://www.share-online.biz/affiliate/"], :root a[href^="https://www.securegfm.com/"], :root DFP-AD, :root a[href^="//porngames.adult/?SID="], :root a[href^="https://www.oneclickroot.com/?tap_a="] > img, :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href^="https://www.iyalc.com/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="http://webgirlz.online/landing/"], :root a[href^="https://www.g4mz.com/"], :root a[href^="https://www.clicktraceclick.com/"], :root a[href^="https://www.camyou.com/?cam="][href*="&track="], :root a[href^="https://www.camsoda.com/enter.php?id="], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root a[href^="https://www.bebi.com"], :root a[href^="https://www.awin1.com/cread.php?awinaffid="], :root a[href^="https://www.adskeeper.co.uk/"], :root a[href^="http://farm.plista.com/pets"], :root a[href^="https://windscribe.com/promo/"], :root a[href^="http://ad-emea.doubleclick.net/"], :root a[href^="https://understandsolar.com/signup/?lead_source="][href*="&tracking_code="], :root div[id^="tms-ad-dfp-"], :root a[href^="https://trust.zone/go/r.php?RID="], :root a[href^="https://trf.bannerator.com/"], :root a[href^="https://bestcond1tions.com/"], :root a[href^="https://trappist-1d.com/"], :root a[href^="https://traffic.bannerator.com/"], :root a[href^="https://tracking.truthfinder.com/?a="], :root #rhs_block .xpdopen > ._OKe > div > .mod > ._yYf, :root a[href^="https://tracking.gitads.io/"], :root a[href^="https://track.ultravpn.com/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://track.healthtrader.com/"], :root a[href^="https://track.clickmoi.xyz/"], :root a[href^="https://control.trafficfabrik.com/"], :root a[href^="https://track.52zxzh.com/"], :root .ra[align="right"][width="30%"], :root a[href^="https://axdsz.pro/"], :root a[href^="https://tour.mrskin.com/"], :root a[href^="https://www.what-sexdating.com/"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://t.mobtya.com/"], :root a[href^="https://t.hrtyj.com/"], :root a[href^="https://t.hrtye.com/"], :root div[id^="ad_head_celtra_"], :root a[href^="https://t.grtyi.com/"], :root a[href^="https://syndication.optimizesrv.com/splash.php?"], :root aside[id^="tn_ads_widget-"], :root a[href^="https://syndication.exoclick.com/splash.php?"], :root a[href^="http://connectlinking6.com/"], :root a[href^="http://cdn3.adexprts.com/"], :root a[href^="https://spygasm.com/track?"], :root div[id^="ad-div-"], :root a[href^="https://secure.eveonline.com/ft/?aid="], :root a[href^="https://secure.bstlnk.com/"], :root a[href^="https://rev.adsession.com/"], :root a[href^="https://redirect.ero-advertising.com/"], :root div[id^="yandex_ad"], :root a[href*=".frtyl.com/"], :root a[href^="http://y1jxiqds7v.com/"], :root a[href^="https://www.hotgirls4fuck.com/"], :root a[href^="https://www.pornhat.com/"][rel="nofollow"], :root AD-SLOT, :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"], :root #rhs_block .mod > .gws-local-hotels__booking-module, :root a[href^="http://www.my-dirty-hobby.com/?sub="], :root a[href^="https://porndeals.com/?track="], :root a[href^="https://offerforge.net/"], :root a[href^="https://my-movie.club/"], :root a[href^="https://msecure117.com/"], :root a[href^="https://mk-cdn.net/"], :root a[href^="https://mk-ads.com/"], :root a[href^="https://medleyads.com/"], :root a[href*=".approvallamp.club/"], :root a[href^="https://landing1.brazzersnetwork.com"], :root a[href^="http://adrunnr.com/"], :root a[href^="https://landing.brazzersplus.com/"], :root a[href^="https://land.rk.com/landing/"], :root .lads[width="100%"][style="background:#FFF8DD"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root a[href^="https://iactrivago.ampxdirect.com/"], :root div[data-ismultirow="true"][data-id^="CarouselPLA-"], :root a[href^="https://horny-pussies.com/tds"], :root a[href^="http://www.usearchmedia.com/signup?"], :root a[onmousedown^="this.href='http://staffpicks.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root a[href^="http://cdn.adstract.com/"], :root a[href^="https://gogoman.me/"], :root a[href^="https://go.stripchat.com/"][href*="&campaignId="], :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://adnetwrk.com/"], :root a[href^="https://go.gldrdr.com/"], :root div[id^="mainads"], :root a[href^="https://go.currency.com/"], :root a[href^="https://track.afftck.com/"], :root a[href^="http://guideways.info/"], :root a[href^="https://go.cmrdr.com/"], :root a[href*=".inclk.com/"], :root a[href^="https://go.ad2up.com/"], :root a[href^="https://freeadult.games/"], :root a[href^="//nlkdom.com/"], :root a[onmousedown^="this.href='http://staffpicks.outbrain.com/network/redir?"][target="_blank"], :root a[href^="https://fonts.fontplace9.com/"], :root a[href^="http://clkmon.com/adServe/"], :root a[href^="https://flirtaescopa.com/"], :root a[href^="https://fleshlight.sjv.io/"], :root a[href^="https://earandmarketing.com/"], :root [lazy-ad="leftthin_banner"], :root a[href^="https://dynamicadx.com/"], :root .GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5, :root a[href^="https://djtcollectorclub.org/"][href*="?affiliate_id="], :root a[href^="http://adf.ly/?id="], :root a[href^="https://uncensored3d.com/"], :root a[href^="https://creacdn.top-convert.com/"], :root a[href^="https://retiremely.com/"], :root a[href^="https://cpmspace.com/"], :root a[href^="https://click.plista.com/pets"], :root a[href^="https://chaturbate.xyz/"], :root a[href^="http://look.djfiln.com/"], :root a[href^="https://chaturbate.jjgirls.com/"][href*="?tour="], :root a[href^="http://rekoverr.com/"], :root a[href^="https://chaturbate.com/in/?track="], :root a[href^="https://chaturbate.com/in/?tour="], :root a[href^="https://chaturbate.com/affiliates/"], :root .mod > ._jH + .rscontainer, :root a[href^="https://blackorange.go2cloud.org/"], :root a[href^="http://www.fleshlight.com/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="http://www.1clickdownloader.com/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="https://awentw.com/"], :root a[href^="https://albionsoftwares.com/"], :root a[href^="https://affiliate.rusvpn.com/click.php?"], :root a[href^="http://adultfriendfinder.com/p/register.cgi?pid="], :root a[href^="https://www.popads.net/users/"], :root iframe[src^="http://ad.yieldmanager.com/"], :root a[href^="http://pubads.g.doubleclick.net/"], :root a[href^="https://sexdatingz.live/"], :root a[href^="//bwnjijl7w.com/"], :root a[href^="https://adultfriendfinder.com/go/page/landing"], :root a[href*="pussl3.com"], :root a[href^="https://adswick.com/"], :root ADS-RIGHT, :root .GKJYXHBF2 > .GKJYXHBE2 > .GKJYXHBH5, :root a[href^="https://adserver.adreactor.com/"], :root a[href^="https://refpaano.host/"], :root a[href^="https://meet-to-fuck.com/tds"], :root a[href^="https://adhealers.com/"], :root a[href^="http://zevera.com/afi.html"], :root a[href^="http://go.oclaserver.com/"], :root a[href^="https://ad.atdmt.com/"], :root .trc_rbox .syndicatedItem, :root a[href^="https://aaucwbe.com/"], :root a[href^="https://8a1ccf65f2b1302.com/"], :root a[href^="http://xtgem.com/click?"], :root a[href^="https://ads.trafficpoizon.com/"], :root div[class^="local-feed-banner-ads"], :root a[href^="http://wxdownloadmanager.com/dl/"], :root a[href^="http://www.zergnet.com/i/"], :root a[href^="http://www.torntv-downloader.com/"], :root a[href^="http://www.tirerack.com/affiliates/"], :root span[data-component-type="s-ads-metrics"], :root div[class^="AdBannerWrapper-"], :root a[href^="http://www.text-link-ads.com/"], :root a[href^="https://weedzy.co.uk/"][href*="&utm_"], :root a[href^="https://gghf.mobi/"], :root a[href^="http://www.terraclicks.com/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="http://www.sfippa.com/"], :root a[href^="http://www.xmediaserve.com/"], :root a[href^="http://www.sex.com/videos/?utm_"], :root a[href^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://www.sex.com/?utm_"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="http://www.roboform.com/php/land.php"], :root a[href^="http://secure.signup-page.com/"], :root a[href^="http://www.quick-torrent.com/download.html?aff"], :root a[href^="http://ffxitrack.com/"], :root a[href^="https://www.im88trk.com/"], :root a[href^="http://www.pinkvisualgames.com/?revid="], :root a[href^="https://trklvs.com/"], :root a[href^="http://www.paddypower.com/?AFF_ID="], :root a[href^="http://www.onwebcam.com/random?t_link="], :root a[href^="https://go.247traffic.com/"], :root a[href^="http://www.freefilesdownloader.com/"], :root a[href^="http://www.mysuperpharm.com/"], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://www.myfreepaysite.com/sfw_int.php?aid"], :root a[href^="http://www.myfreepaysite.com/sfw.php?aid"], :root .rhsvw[style="background-color:#fff;margin:0 0 14px;padding-bottom:1px;padding-top:1px;"], :root a[href^="http://www.moneyducks.com/"], :root a[href^="http://bcntrack.com/"], :root a[href^="http://www.securegfm.com/"], :root a[href^="http://www.liversely.net/"], :root a[href^="http://www.linkbucks.com/referral/"], :root a[href^="//88d7b6aa44fb8eb.com/"], :root a[href^="http://www.ireel.com/signup?ref"], :root [href*="prayuserparka.com/"], :root a[href^="http://www.idownloadplay.com/"], :root a[href^="http://www.hitcpm.com/"], :root a[href^="http://fusionads.net"], :root a[href^="http://www.hibids10.com/"], :root div[class^="awpcp-random-ads"], :root [href*="//securesafemembers.com"], :root a[href^="http://www.graboid.com/affiliates/"], :root a[href^="http://www.gamebookers.com/cgi-bin/intro.cgi?"], :root div[id^="div_openx_ad_"], :root a[href^="http://www.friendlyquacks.com/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="https://content.oneindia.com/www/delivery/"], :root a[href^="http://www.fpcTraffic2.com/blind/in.cgi?"], :root a[href^="http://www.flashx.tv/downloadthis"], :root .trc_rbox_div a[target="_blank"][href^="http://tab"], :root a[href^="https://americafirstpolls.com/"], :root a[href^="http://clickserv.sitescout.com/"], :root a[href^="http://www.firstload.de/affiliate/"], :root a[href^="http://www.twinplan.com/AF_"], :root a[href^="http://www.fducks.com/"], :root a[href^="http://www.epicgameads.com/"], :root a[href^="http://www.easydownloadnow.com/"], :root a[href^="http://www.duckssolutions.com/"], :root a[href^="https://go.trkclick2.com/"], :root a[href^="http://www.duckcash.eu/"], :root a[href^="http://go.seomojo.com/tracking202/"], :root a[href^="http://www.downloadweb.org/"], :root a[href^="http://www.down1oads.com/"], :root a[href^="https://trafficmedia.center/"], :root a[href^="http://www.dealcent.com/register.php?affid="], :root .rscontainer > .ellip, :root a[href^="http://www.clkads.com/adServe/"], :root a[href^="http://www.clickansave.net/"], :root div[class^="adpubs-"], :root a[href*="deliver.trafficfabrik.com"], :root a[href^="http://www.cash-duck.com/"], :root a[href^="https://aff-ads.stickywilds.com/"], :root a[href^="http://www.bitlord.me/share/"], :root div[class^="Directory__footerAds"], :root a[href^="http://www.bet365.com/"][href*="?affiliate="], :root a[href^="http://www.bet365.com/"][href*="&affiliate="], :root a[href^="http://www.badoink.com/go.php?"], :root a[href^="http://www.babylon.com/welcome/index?affID"], :root a[href^="http://www.sexgangsters.com/?pid="], :root a[href^="http://www.amazon.co.uk/exec/obidos/external-search?"], :root a[href^="https://ads-for-free.com/click.php?"], :root a[href^="http://www.socialsex.com/"], :root div[class^="index_adBeforeContent_"], :root a[href^="http://www.affbuzzads.com/affiliate/"], :root a[href^="http://go.ad2up.com/"], :root a[href^="https://badoinkvr.com/"], :root a[href*="/adServe/banners?"], :root a[href^="http://www.adxpansion.com"], :root .plistaList > .itemLinkPET, :root a[href^="http://www.adbrite.com/mb/commerce/purchase_form.php?"], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root a[href^="http://www.ragazzeinvendita.com/?rcid="], :root a[href^="http://www.TwinPlan.com/AF_"], :root a[href^="https://www.iclwy.xyz/"], :root a[href^="http://www.123-reg.co.uk/affiliate2.cgi"], :root div[itemtype="http://www.schema.org/WPAdBlock"], :root a[href^="http://wopertific.info/"], :root a[href^="http://bodelen.com/"], :root a[href^="http://wgpartner.com/"], :root a[href^="http://web.adblade.com/"], :root a[href^="https://go.onclasrv.com/"], :root a[href^="http://wct.link/"], :root a[href^="https://topoffers.com/"][href*="/?pid="], :root a[href^="http://vinfdv6b4j.com/"], :root a[href^="http://s9kkremkr0.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="http://us.marketgid.com"], :root a[href^="http://ul.to/ref/"], :root a[href^="http://ucam.xxx/?utm_"], :root a[href^="https://adsrv4k.com/"], :root a[href^="http://trk.mdrtrck.com/"], :root a[href^="http://traffic.tc-clicks.com/"], :root a[href^="http://www.liutilities.com/"], :root a[href^="http://www.dl-provider.com/search/"], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="http://tracking.deltamediallc.com/"], :root a[href^="http://tour.affbuzzads.com/"], :root a[href^="https://iac.ampxdirect.com/"], :root a[href^="http://t.mdn2015x3.com/"], :root a[href^="http://galleries.securewebsiteaccess.com/"], :root a[href^="http://stateresolver.link/"], :root a[href^="http://sharesuper.info/"], :root a[href^="https://awecrptjmp.com/"], :root a[href^="http://server.cpmstar.com/click.aspx?poolid="], :root .trc_related_container div[data-item-syndicated="true"], :root a[href^="https://www.firstload.com/affiliate/"], :root a[href^="http://see.kmisln.com/"], :root a[href^="http://www.downloadthesefiles.com/"], :root a[href^="http://secure.cbdpure.com/aff/"], :root aside[id^="advads_ad_widget-"], :root a[href^="http://lp.ezdownloadpro.info/"], :root a[href^="http://uploaded.net/ref/"], :root a[href^="http://t.mdn2015x1.com/"], :root a[href^="http://azmobilestore.co/"], :root a[href^="http://s5prou7ulr.com/"], :root a[href^="https://affiliates.bet-at-home.com/processing/"], :root a[href^="https://ads.ad4game.com/"], :root a[href^="https://betway.com/"][href*="&a="], :root div[class*="-storyBodyAd-"], :root a[href^="https://easygamepromo.com/ef/custom_affiliate/"], :root a[href^="http://record.betsafe.com/"], :root a[href^="http://mo8mwxi1.com/"], :root a[href^="https://bnsjb1ab1e.com/"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"], :root a[href^="//oardilin.com/"], :root a[href^="http://pwrads.net/"], :root a[href^="http://promos.bwin.com/"], :root a[href*=".irtyc.com/"], :root a[href^="http://z1.zedo.com/"], :root a[href^="http://pokershibes.com/index.php?ref="], :root a[href^="https://bs.serving-sys.com"], :root [href*="wap4dollar.com/"], :root .__y_elastic .__y_item, :root a[href^="https://mcdlks.com/"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://play4k.co/"], :root a[href^="http://partner.sbaffiliates.com/"], :root a[href^="https://dltags.com/"], :root a[href^="http://onclickads.net/"], :root a[href^="http://mmo123.co/"], :root a[href^="https://www.oboom.com/ref/"], :root a[href^="http://media.paddypower.com/redirect.aspx?"], :root a[href^="http://allaptair.club/"], :root .section-result[data-result-ad-type], :root a[href^="https://deliver.ptgncdn.com/"], :root a[href^="http://latestdownloads.net/download.php?"], :root a[href^="http://k2s.cc/code/"], :root #topstuff > #tads, :root a[href*=".bang.com/"][href*="&aff="], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://join3.bannedsextapes.com/track/"], :root a[href^="https://gamescarousel.com/"], :root a[href^="http://istri.it/?"], :root a[href^="//awejmp.com/"], :root a[href^="http://mob1ledev1ces.com/"], :root a[href^="http://www.fbooksluts.com/"], :root a[href^="http://www.cdjapan.co.jp/aff/click.cgi/"], :root a[href^="//api.ad-goi.com/"], :root a[href*="//ridingintractable.com/"], :root a[href^="http://intent.bingads.com/"], :root div[id^="crt-"][style], :root a[href^="http://igromir.info/"], :root a[href^="https://track.themadtrcker.com/"], :root a[href^="http://hyperlinksecure.com/go/"], :root a[href^="https://intrev.co/"], :root a[href^="http://https://www.get-express-vpn.com/offer/"], :root .ob_container .item-container-obpd, :root a[href^="http://websitedhoome.com/"], :root a[href^="http://www.adskeeper.co.uk/"], :root a[href^="https://clickadilla.com/"], :root a[href^="http://www.gfrevenge.com/landing/"], :root a[href^="http://45eijvhgj2.com/"], :root a[href^="http://hpn.houzz.com/"], :root a[href^="http://searchtabnew.com/"], :root a[href*="?adlivk="][href*="&refer="], :root a[href^="//look.djfiln.com/"], :root a[href^="http://greensmoke.com/"], :root a[href^="//5e1fcb75b6d662d.com/"], :root #tads[aria-label], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root aside[itemtype="https://schema.org/WPAdBlock"], :root a[href^="https://watchmygirlfriend.tv/"], :root .nrelate .nr_partner, :root a[href^="http://go.xtbaffiliates.com/"], :root a[href^="//mob1ledev1ces.com/"], :root a[href^="http://online.ladbrokes.com/promoRedirect?"], :root a[href^="http://go.trafficshop.com/"], :root a[href^="http://install.securewebsiteaccess.com/"], :root a[href^="http://www.revenuehits.com/"], :root a[href^="http://go.mobisla.com/"], :root a[href^="//srv.buysellads.com/"], :root a[href^="http://g1.v.fwmrm.net/ad/"], :root .widget-pane-section-result[data-result-ad-type], :root a[href^="http://imads.integral-marketing.com/"], :root a[href^="http://freesoftwarelive.com/"], :root a[href^="http://adtrackone.eu/"], :root a[href^="http://finaljuyu.com/"], :root a[href^="http://fileloadr.com/"], :root a[href^="http://extra.bet365.com/"][href*="?affiliate="], :root a[href^="http://ethfw0370q.com/"], :root [id^="bunyad_ads_"], :root a[href^="http://elitefuckbook.com/"], :root a[href^="http://eclkmpsa.com/"], :root a[href^="http://earandmarketing.com/"], :root a[href*=".mfroute.com/"], :root #content > #center > .dose > .dosesingle, :root a[href^="http://campaign.bharatmatrimony.com/track/"], :root a[href*="3wr110.xyz/"], :root a[href^="http://d2.zedo.com/"], :root a[href^="http://keep2share.cc/pr/"], :root a[href^="https://iqoption.com/lp/mobile-partner/"][href*="?aff="], :root a[href^="http://cp.cbbp1.com"], :root a[href^="http://contractallsticker.net/"], :root a[href^="http://codec.codecm.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://www.downloadplayer1.com/"], :root a[href^="http://clicks.binarypromos.com/"], :root a[href^="https://dediseedbox.com/clients/aff.php?"], :root a[href^="http://www.wantstraffic.com/"], :root a[href^="http://databass.info/"], :root a[href^="http://www.urmediazone.com/signup"], :root a[href^="http://click.plista.com/pets"], :root a[href^="http://chaturbate.com/affiliates/"], :root a[href^="http://www.firstload.com/affiliate/"], :root a[href^="http://www.friendlyadvertisements.com/"], :root a[href^="http://go.fpmarkets.com/"], :root a[href^="//00ae8b5a9c1d597.com/"], :root a[href^="http://cdn3.adbrau.com/"], :root a[href^="http://amzn.to/"] > img[src^="data"], :root a[href^="http://bs.serving-sys.com/"], :root a[href^="http://cpaway.afftrack.com/"], :root a[href^="http://cdn.adsrvmedia.net/"], :root [lazy-ad="top_banner"], :root a[href^="http://360ads.go2cloud.org/"], :root a[href^="http://dftrck.com/"], :root a[href^="http://casino-x.com/?partner"], :root a[href^="http://record.sportsbetaffiliates.com.au/"], :root a[href^="http://campeeks.com/"][href*="&utm_"], :root #flowplayer > div[style="position: absolute; width: 300px; height: 275px; left: 222.5px; top: 85px; z-index: 999;"], :root a[href^="http://download-performance.com/"], :root a[href^="http://www.on2url.com/app/adtrack.asp"], :root #\5f _nq__hh[style="display:block!important"], :root div[class^="index_displayAd_"], :root a[href^="http://adultgames.xxx/"], :root a[href^="http://semi-cod.com/clicks/"], :root a[href^="http://campaign.bharatmatrimony.com/cbstrack/"], :root a[href^="http://xads.zedo.com/"], :root a[href^="http://www.affiliates1128.com/processing/"], :root a[href^="http://c.jumia.io/"], :root a[href^="http://yads.zedo.com/"], :root a[href^="https://bullads.net/get/"], :root a[href^="http://down1oads.com/"], :root a[href^="http://buysellads.com/"], :root a[href^="https://uncensored.game/"], :root td[valign="top"] > .mainmenu[style="padding:10px 0 0 0 !important;"], :root a[href^="http://feedads.g.doubleclick.net/"], :root a[href^="http://betahit.click/"], :root a[href^="https://torguard.net/aff.php"] > img, :root a[href^="http://bestorican.com/"], :root a[href^="http://bcp.crwdcntrl.net/"], :root a[href^="http://bc.vc/?r="], :root a[href^="http://banners.victor.com/processing/"], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="https://transfer.xe.com/signup/track/redirect?"], :root a[href^="http://anonymous-net.com/"], :root a[href^="http://affiliates.pinnaclesports.com/processing/"], :root a[href^="http://affiliate.coral.co.uk/processing/"], :root a[href^="http://aff.ironsocket.com/"], :root a[href^="http://adsrv.keycaptcha.com"], :root a[href^="https://secure.adnxs.com/clktrb?"], :root a[href^="http://adserver.adtechus.com/"], :root a[href^="http://adserver.adreactor.com/"], :root a[href^="http://www.yourfuckbook.com/?"], :root a[href^="//go.onclasrv.com/"], :root .GHOFUQ5BG2 > .GHOFUQ5BF2 > .GHOFUQ5BG5, :root #\5f _mom_ad_2, :root a[href^="http://ads.sprintrade.com/"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="http://adserver.adtech.de/"], :root a[href^="http://cwcams.com/landing/click/"], :root a[href^="http://ads.betfair.com/redirect.aspx?"], :root a[href^="http://ads.affbuzzads.com/"], :root [id*="MarketGid"], :root #resultspanel > #topads, :root a[href^="http://espn.zlbu.net/"], :root a[href^="http://admrotate.iplayer.org/"], :root a[href^="http://reallygoodlink.extremefreegames.com/"], :root a[href^="http://adlev.neodatagroup.com/"], :root a[href^="http://ad.doubleclick.net/"], :root a[href^="https://k2s.cc/pr/"], :root a[href^="http://ad.au.doubleclick.net/"], :root a[href^="http://srvpub.com/"], :root a[href^="http://a.adquantix.com/"], :root a[href^="http://NowDownloadAll.com"], :root a[href^="http://adtrack123.pl/"], :root a[href^="http://9amq5z4y1y.com/"], :root a[href^="//go.vedohd.org/"], :root a[href^="http://www.ducksnetwork.com/"], :root a[href^="http://3wr110.net/"], :root a[href^="http://1phads.com/"], :root a[href^="//zenhppyad.com/"], :root a[href^="//www.pd-news.com/"], :root [href*=".doubleclick-net.com"], :root a[href^="//www.mgid.com/"], :root a[href^="http://lp.ncdownloader.com/"], :root a[href^="//pubads.g.doubleclick.net/"], :root a[href^="http://refer.webhostingbuzz.com/"], :root a[href^="//medleyads.com/spot/"], :root div[id^="ad-gpt-"], :root a[href^="http://pan.adraccoon.com?"], :root a[href^="https://ilovemyfreedoms.com/"][href*="?affiliate_id="], :root [href*=".afftracks.online/"], :root a[href^="//healthaffiliate.center/"], :root .l-container > #fishtank, :root [onclick*="content.ad/"], :root a[href^="https://clixtrac.com/"], :root [href*=".adcampo.com/"], :root a[href^="https://www.oboom.com/ad/"], :root a[href^="//4f6b2af479d337cf.com/"], :root a[href^="http://n217adserv.com/"], :root a[href^="//4c7og3qcob.com/"], :root a[href^="https://www.arthrozene.com/"][href*="?tid="], :root a[href^="https://awejmp.com/"], :root [href*="//go2page.net"], :root a[href^=" http://www.sex.com/"][href*="&utm_"], :root a[href^="https://fileboom.me/pr/"], :root a[href^="http://marketgid.com"], :root .GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XEDJBB, :root a[href*="onclkds."], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href*=".intab.fun/"], :root a[href*="get-express-vpn.xyz"], :root a[href*=".adsrv.eacdn.com/"] > img, :root a[href^="http://mgid.com/"], :root a[href*="a2g-secure.com"], :root a[href*="=adscript"], :root #mn #center_col > div > h2.spon:first-child, :root a[href*="=Adtracker"], :root a[href*="//bongacams5.com/track?"], :root FBS-AD, :root a[href*="5iclx7wa4q.com"], :root a[href^="http://refpaano.host/"], :root a[href*="/cmd.php?ad="], :root a[href^="http://www.firstclass-download.com/"], :root a[href*="//bongacams7.com/track?"], :root div[id^="advads-"], :root a[href^="http://www.myfreecams.com/?co_id="][href*="&track="], :root a[href^="https://track.afcpatrk.com/"], :root a[href*=".ad-center.com/"], :root a[href*=".udncoeln.com/"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root a[href*=".qertewrt.com/"], :root a[target="_blank"][href^="http://api.taboola.com/"], :root a[href*=".smartadserver.com"], :root .__ywvr .__y_item, :root a[href^="https://farm.plista.com/pets"], :root a[href*=".red90121.com/"], :root a[href^="https://playuhd.host/"], :root .mw > #rcnt > #center_col > #taw > #tvcap > .c, :root a[href*=".purple6401.com/"], :root a[href^="http://www.greenmangaming.com/?tap_a="], :root a[href*=".opskln.com/"], :root div[id^="div_ad_stack_"], :root a[href*=".ichlnk.com/"], :root a[href^="http://secure.hostgator.com/~affiliat/"], :root [onclick^="window.open('http://adultfriendfinder.com/search/"], :root [href*=".revrtb.com/"], :root .mod > .gws-local-promotions__border, :root a[href^="https://deliver.tf2www.com/"], :root a[href^="http://spygasm.com/track?"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root a[href*=".adk2x.com/"], :root a[href^="http://data.committeemenencyclopedicrepertory.info/"], :root a[href*=".allsports4you.club"], :root a[href^="https://track.bruceads.com/"], :root #MAIN.ShowTopic > .ad, :root a[href^="https://porngames.adult/?SID="], :root a[href^="http://findersocket.com/"], :root a[href^="https://m.do.co/c/"] > img, :root [href*=".ltroute.com/"], :root #tads + div + .c, :root a[href^="//jsmptjmp.com/"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > .vci, :root a[href^="https://financeads.net/tc.php?"], :root #ssmiwdiv[jsdisplay], :root a[href*=".adform.net/"], :root a[href^="http://duckcash.eu/"], :root a[href^="http://www.mobileandinternetadvertising.com/"], :root a[href*="=exoclick"], :root a[href^="https://track.trkinator.com/"], :root div[id^="ad-position-"], :root a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"], :root a[href^="http://liversely.com/"], :root .GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-, :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href^="http://liversely.net/"], :root .ra[width="30%"][align="right"] + table[width="70%"][cellpadding="0"], :root a[href^="http://www.coiwqe.site/"], :root iframe[id^="google_ads_frame"], :root a[href^="http://www.bluehost.com/track/"] > img, :root a[data-url^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://n.admagnet.net/"], :root [href*=".jetx.info/"], :root a[href^="http://bestchickshere.com/"], :root div[id^="cns_ads_"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://www.getyourguide.com/?partner_id="], :root [onclick^="window.open('https://www.brazzersnetwork.com/landing/"], :root a[href^="https://vod09197d7.club/"], :root a[href^="http://k2s.cc/pr/"], :root a[href^="http://9nl.es/"], :root #assetsListings[style="display: block;"], :root [onclick^="window.open('window.open('//delivery.trafficfabrik.com/"], :root a[href^="https://keep2share.cc/pr/"], :root a[data-oburl^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://refpa.top/"], :root a[href*="//bongacams.com/track?"], :root a[href^="https://servedbyadbutler.com/"], :root a[href^="https://mob1ledev1ces.com/"], :root a[data-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href^="https://explore.findanswersnow.net/"], :root [id^="adframe_wrap_"], :root a[href^="http://landingpagegenius.com/"], :root a[data-redirect^="http://click.plista.com/pets"], :root .section-subheader > .section-hotel-prices-header, :root a[href^="http://a63t9o1azf.com/"], :root [href*="//etracking.pro"], :root a[href^="http://www.fonts.com/BannerScript/"], :root a[href^="http://c.ketads.com/"], :root a[href^="http://6kup12tgxx.com/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root [href^="http://raboninco.com/"], :root a[href^="https://www.passeura.com/"], :root a[href^="http://www.pinkvisualpad.com/?revid="], :root a[href^="https://www.friendlyduck.com/AF_"], :root [href^="http://advertisesimple.info/"], :root #center_col > #resultStats + #tads + #res + #tads, :root a[href*="//bongacams2.com/track?"], :root [href*="cadsecs.com/"], :root a[href^="https://zononi.com/"], :root a[href^="http://adserving.unibet.com/"], :root [href*="//trackout.business"], :root #rhs_block .mod > .luhb-div > div[data-async-type="updateHotelBookingModule"], :root a[href^="http://adclick.g.doubleclick.net/"], :root [href*="//mclick.net"], :root .commercial-unit-desktop-rhs > .iKidV > .Ee92ae + .P2mpm + .hp3sk, :root div[role="navigation"] + c-wiz > div > .kxhcC, :root a[href^="http://www.download-provider.org/"], :root [href*="//doubleclick-net.com"], :root a[href^="http://deloplen.com/afu.php?zoneid="], :root a[href^="//db52cc91beabf7e8.com/"], :root [id*="ScriptRoot"], :root a[href^="http://partners.etoro.com/"], :root [href*=".xiloy.site/"], :root a[href^="http://webtrackerplus.com/"], :root a[href^="https://ad13.adfarm1.adition.com/"], :root a[href^="http://clickandjoinyourgirl.com/"], :root div[itemtype="http://schema.org/WPAdBlock"], :root a[href^="https://www.nudeidols.com/cams/"], :root #center_col > #res > #topstuff + #search > div > #ires > #rso > #flun, :root [href*=".trackout.business"], :root a[href^="http://4c7og3qcob.com/"], :root a[href^="https://trusted-click-host.com/"], :root a[href^="https://members.linkifier.com/public/affiliateLanding?refCode="], :root a[href^="https://jmp.awempire.com/"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > div > .vci, :root a[href*="delivery.trafficfabrik.com"], :root #ads > .dose > .dosesingle, :root a[href*=".revimedia.com/"], :root #center_col > #taw > #tvcap > .rscontainer, :root [href*=".securesafemembers.com"], :root a[href^="https://www.adxtro.com/"], :root .gbfwa > div[class$="_item"], :root a[href^="https://goraps.com/"], :root [href*=".etracking.pro"], :root a[href^="http://tezfiles.com/pr/"], :root #rhs_block > ol > .rhsvw > .kp-blk > .xpdopen > ._OKe > ol > ._DJe > .luhb-div, :root a[href^="http://see-work.info/"], :root a[href*="/adrotate-out.php?"], :root #atvcap + #tvcap > .mnr-c > .commercial-unit-mobile-top, :root .inlineNewsletterSubscription + .inlineNewsletterSubscription div[class$="_item"], :root a[href*=".orange2258.com/"], :root #taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top, :root .plista_widget_belowArticleRelaunch_item[data-type="pet"], :root #main-content > [style="padding:10px 0 0 0 !important;"], :root #center_col > #resultStats + div[style="border:1px solid #dedede;margin-bottom:11px;padding:5px 7px 5px 6px"], :root a[href^="http://get.slickvpn.com/"], :root [data-ad-module], :root [href*=".go2page.net"], :root a[href^="http://hd-plugins.com/download/"], :root a[href^="//voyeurhit.com/cs/"], :root a[href^="http://www.afgr3.com/"], :root [ad-id^="googlead"], :root .ra[align="left"][width="30%"], :root a[href^="https://trackjs.com/?utm_source"], :root AFS-AD, :root #center_col > #\5f Emc, :root a[href^="http://ads2.williamhill.com/redirect.aspx?"], :root a[href^="https://www.spyoff.com/"], :root AD-TRIPLE-BOX, :root .trc_rbox_div .syndicatedItem, :root a[href^="http://www.streamate.com/exports/"], :root [href*="maskip.co/"], :root #center_col > #main > .dfrd > .mnr-c > .c._oc._zs, :root div[data-subscript="Advertising"], :root div[class$="dealnews"] > .dealnews, :root a[href^="http://t.mdn2015x2.com/"], :root div[id^="rc-widget-"], :root a[href^="http://b.bestcompleteusa.info/"], :root .trc_rbox_div .syndicatedItemUB, :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root .icons-rss-feed + .icons-rss-feed div[class$="_item"], :root a[href^="http://aflrm.com/"], :root div[id^="google_dfp_"], :root [href*="get-download.club/"], :root #mn div[style="position:relative"] > #center_col > div > ._dPg, :root a[href*=".clksite.com/"], :root a[href^="http://www.webtrackerplus.com/"], :root .GJJKPX2N1 > .GJJKPX2M1 > .GJJKPX2P4, :root a[href^="https://go.hpyjmp.com/"], :root .vi-lb-placeholder[title="ADVERTISEMENT"], :root a[href^="http://goldmoney.com/?gmrefcode="], :root a[href^="http://papi.mynativeplatform.com:80/pub2/"], :root LEADERBOARD-AD, :root #mn #center_col > div > h2.spon:first-child + ol:last-child, :root a[href*=".cfm?fp="][href*="&prvtof="], :root a[href*="n47adshostnet.com/"], :root #center_col > #taw > #tvcap > .commercial-unit-desktop-top, :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href^="http://servicegetbook.net/"], :root #rhs_block > #mbEnd, :root a[href^="http://cinema.friendscout24.de?"], :root [lazy-ad="lefttop_banner"], :root a[href^="http://www.mrskin.com/tour"], :root .jobs-information-call-to-action + .jobs-information-call-to-action div[class$="_item"], :root a[href^="http://api.content.ad/"], :root a[href^="http://adtransfer.net/"], :root a[href*=".clkcln.com/"], :root a[href^="http://www.uniblue.com/cm/"], :root #rhs_block > script + .c._oc._Ve.rhsvw, :root #\5f _mom_ad_12, :root .__zinit .__y_item, :root .ch[onclick="ga(this,event)"], :root .__ywl .__y_item, :root a[href^="http://track.trkvluum.com/"], :root a[href^="http://linksnappy.com/?ref="], :root [src^="/Redirect.a2b?"], :root #center_col > #resultStats + #tads, :root .__yinit .__y_item, :root #center_col > div[style="font-size:14px;margin-right:0;min-height:5px"] > div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff8e7"], :root a[href^="https://secure.cbdpure.com/aff/"], :root AMP-AD, :root iframe[src*="mellowads.com"], :root .__y_inner > .__y_item, :root #cnt #center_col > #res > #topstuff > .ts, :root a[href^="https://landing.brazzersnetwork.com/"], :root #cnt #center_col > #taw > #tvcap > .c._oc._Lp, :root a[href^="https://sexsimulator.game/tab/?SID="], :root .rc-cta[data-target], :root a[href*="//promo-bc.com/track?"], :root a[href*=".trust.zone"], :root div[class^="hp-ad-rect-"], :root a[href^="http://dwn.pushtraffic.net/"], :root a[href$="/vghd.shtml"], :root .GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5, :root div[class^="AdEmbeded__AddWrapper"], :root a[href^="http://affiliates.score-affiliates.com/"], :root a[href^="https://a.adtng.com/"], :root #rhswrapper > #rhssection[border="0"][bgcolor="#ffffff"], :root .Mpopup + #Mad > #MadZone, :root a[href^="http://ads.expekt.com/affiliates/"], :root a[href^="http://www.streamtunerhd.com/signup?"], :root p[id^="div-gpt-ad-"], :root a[href^="http://fsoft4down.com/"], :root a[href*="ad2upapp.com/"], :root a[href*=".fwd28.com/"], :root [lazy-ad="leftbottom_banner"], :root a[href^="http://click.payserve.com/"], :root a[href^="http://serve.williamhill.com/promoRedirect?"], :root [href*=".mclick.net"], :root #center_col > #taw > #tvcap > .cu-container > .commercial-unit-desktop-top, :root a[href^="http://www.menaon.com/installs/"], :root a[href^="http://taboola-"][href*="/redirect.php?app.type="], :root .mw > #rcnt > #center_col > #taw > .c, :root #rhs_block > .ts[cellspacing="0"][cellpadding="0"][style="padding:0"], :root div[data-ad-underplayer], :root #mbEnd[cellspacing="0"][cellpadding="0"], :root #header + #content > #left > #rlblock_left, :root a[href^="http://www.seekbang.com/cs/"], :root a[href^="http://syndication.exoclick.com/"], :root a[href^="http://bluehost.com/track/"], :root a[href^="https://squren.com/rotator/?atomid="], :root a[href^="//40ceexln7929.com/"], :root #center_col > #resultStats + div + #res + #tads, :root a[href^="http://www.afgr2.com/"], :root #mn div[style="position:relative"] > #center_col > ._Ak, :root #tadsb[aria-label], :root a[href^="//z6naousb.com/"], :root div[id^="ad_bigbox_"], :root #content > #right > .dose > .dosesingle, :root a[href^="https://track.totalav.com/"], :root a[href^="http://ad-apac.doubleclick.net/"], :root a[href^="http://t.wowtrk.com/"], :root div[class^="Ad__container"], :root a[href^="http://adprovider.adlure.net/"], :root div[id^="adspot-"], :root #\5f _admvnlb_modal_container, :root div[id^="drudge-column-ads-"], :root a[href^="http://tour.mrskin.com/"], :root #main_col > #center_col div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff7ed"], :root a[data-nvp*="'trafficUrl':'https://paid.outbrain.com/network/redir?"], :root a[href^="http://www.sex.com/pics/?utm_"], :root a[href^="http://vo2.qrlsx.com/"], :root a[href^="http://engine.newsmaxfeednetwork.com/"], :root a[href^="http://ad.yieldmanager.com/"], :root a[href^="http://www.plus500.com/?id="], :root #flowplayer > div[style="z-index: 208; position: absolute; width: 300px; height: 275px; left: 222.5px; top: 85px;"], :root a[href^="https://giftsale.co.uk/?utm_"] { display: none !important; }</style><style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:40px}.body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button{padding-top:21px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style><style type="text/css">.at-branding-logo{font-family:helvetica,arial,sans-serif;text-decoration:none;font-size:10px;display:inline-block;margin:2px 0;letter-spacing:.2px}.at-branding-logo .at-branding-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")}.at-branding-logo .at-branding-icon,.at-branding-logo .at-privacy-icon{display:inline-block;height:10px;width:10px;margin-left:4px;margin-right:3px;margin-bottom:-1px;background-repeat:no-repeat}.at-branding-logo .at-privacy-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")}.at-branding-logo span{text-decoration:none}.at-branding-logo .at-branding-addthis,.at-branding-logo .at-branding-powered-by{color:#666}.at-branding-logo .at-branding-addthis:hover{color:#333}.at-cv-with-image .at-branding-addthis,.at-cv-with-image .at-branding-addthis:hover{color:#fff}a.at-branding-logo:visited{color:initial}.at-branding-info{display:inline-block;padding:0 5px;color:#666;border:1px solid #666;border-radius:50%;font-size:10px;line-height:9pt;opacity:.7;transition:all .3s ease;text-decoration:none}.at-branding-info span{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.at-branding-info:before{content:'i';font-family:Times New Roman}.at-branding-info:hover{color:#0780df;border-color:#0780df}</style></head>
+
+<body class="post-template-default single single-post postid-1199 single-format-standard custom-background wp-embed-responsive masthead-fixed singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			
+<h1 class="site-title"><a href="https://www.javabrahman.com/" rel="home"><img src="./Java 8 Streams API Tutorial with Examples_files/JBLinkHeader2.png" style="width:128px; height:32px;"></a></h1>
+			<div class="search-toggle">
+				<a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">Primary Menu</button>
+				<a class="screen-reader-text skip-link" href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#content">Skip to content</a>
+				<div class="menu-about-java-brahman-container"><ul id="primary-menu" class="nav-menu"><li id="menu-item-8212" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-8212"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Java 8</a>
+<ul class="sub-menu">
+	<li id="menu-item-8281" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8281"><a href="https://www.javabrahman.com/reviews/5-best-books-learning-java-8-reviewed/">5 Best Java 8 Books Reviewed</a></li>
+	<li id="menu-item-8202" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8202"><a href="https://www.javabrahman.com/java-8/new-features-in-java-8/">Java 8 New Features List</a></li>
+	<li id="menu-item-8222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8222"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Lambdas &amp; Functional Interfaces</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8203" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8203"><a href="https://www.javabrahman.com/java-8/functional-interfaces-java-8/">Functional Interfaces</a></li>
+		<li id="menu-item-8204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8204"><a href="https://www.javabrahman.com/java-8/lambda-expressions-java-8-explained-examples/">Lambda Expressions</a></li>
+		<li id="menu-item-8205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8205"><a href="https://www.javabrahman.com/java-8/function-descriptors-java-8-explained/">Function Descriptors</a></li>
+		<li id="menu-item-8207" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8207"><a href="https://www.javabrahman.com/java-8/java-8-method-references-tutorial-examples/">Method References</a></li>
+		<li id="menu-item-8206" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8206"><a href="https://www.javabrahman.com/java-8/constructor-references-java-8-simplified-tutorial/">Constructor References</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8224"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">New Function Package</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8226"><a href="https://www.javabrahman.com/java-8/java-8-java-util-function-package-tutorial/">java.util.function package overview</a></li>
+		<li id="menu-item-8225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8225"><a href="https://www.javabrahman.com/java-8/java-8-java-util-function-predicate-tutorial-with-examples/">Predicate Interface</a></li>
+		<li id="menu-item-8238" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8238"><a href="https://www.javabrahman.com/java-8/java-8-java-util-function-consumer-tutorial-with-examples/">Consumer Interface</a></li>
+		<li id="menu-item-8242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8242"><a href="https://www.javabrahman.com/java-8/java-8-java-util-function-function-tutorial-with-examples/">Function Interface</a></li>
+		<li id="menu-item-8244" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8244"><a href="https://www.javabrahman.com/java-8/java-8-java-util-function-supplier-tutorial-with-examples/">Supplier Interface</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8239" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-8239"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Streams API</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8208" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-8208"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/" aria-current="page">Streams API Overview</a></li>
+		<li id="menu-item-8240" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8240"><a href="https://www.javabrahman.com/java-8/java-8-filtering-and-slicing-streams-tutorial-with-examples/">Filtering &amp; Slicing</a></li>
+		<li id="menu-item-8246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8246"><a href="https://www.javabrahman.com/java-8/java-8-mapping-with-streams-map-flatmap-methods-tutorial-with-examples/">Mapping – map/flatMap methods</a></li>
+		<li id="menu-item-8275" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8275"><a href="https://www.javabrahman.com/java-8/java-8-matching-with-streams-allmatch-anymatch-nonematch-methods-tutorial-examples/">Matching – allmatch/ anyMatch/noneMatch methods</a></li>
+		<li id="menu-item-8276" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8276"><a href="https://www.javabrahman.com/java-8/java-8-finding-with-streams-findfirst-findany-methods-tutorial-examples/">findAny/findFirst methods</a></li>
+		<li id="menu-item-8277" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8277"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-creating-infinite-streams-with-iterate-and-generate-methods/">Infinite Streams using iterate/generate methods</a></li>
+		<li id="menu-item-8279" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8279"><a href="https://www.javabrahman.com/java-8/java-8-reducing-with-streams-reduce-method-tutorial-with-examples/">Reducing with Streams</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8230" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8230"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Default Methods</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8221"><a href="https://www.javabrahman.com/java-8/default-methods-in-java-8-with-examples">What are Default Methods</a></li>
+		<li id="menu-item-8229" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8229"><a href="https://www.javabrahman.com/java-8/java-8-multiple-inheritance-of-behavior-from-interfaces-using-default-methods/">Multiple Inheritance</a></li>
+		<li id="menu-item-8231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8231"><a href="https://www.javabrahman.com/java-8/java-8-multiple-inheritance-conflict-resolution-rules-and-diamond-problem/">Multi-Inheritance Conflicts &amp; Diamond Problem</a></li>
+		<li id="menu-item-8227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8227"><a href="https://www.javabrahman.com/java-8/java-8-static-methods-vs-default-methods-in-interfaces/">Static vs Default Methods</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8253"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Collectors</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8293" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8293"><a href="https://www.javabrahman.com/java-8/java-8-java-util-stream-collector-basics-tutorial-with-examples/">Collector fundamentals</a></li>
+		<li id="menu-item-8297" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8297"><a href="https://www.javabrahman.com/java-8/java-8-grouping-with-collectors-groupingby-method-tutorial-with-examples/">Java 8 Grouping with Collectors</a></li>
+		<li id="menu-item-8292" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8292"><a href="https://www.javabrahman.com/java-8/java-8-partitioning-with-collectors-partitioningby-method-tutorial-with-examples/">Partitioning with Collectors</a></li>
+		<li id="menu-item-8294" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8294"><a href="https://www.javabrahman.com/java-8/java-8-counting-with-collectors-collectors-counting-method-tutorial-with-examples/">Counting with Collectors</a></li>
+		<li id="menu-item-8295" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8295"><a href="https://www.javabrahman.com/java-8/java-8-finding-maxmin-with-collectors-maxby-minby-methods-tutorial-with-examples/">Max/Min with Collectors</a></li>
+		<li id="menu-item-8296" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8296"><a href="https://www.javabrahman.com/java-8/java-8-joining-with-collectors-collectors-joining-method-tutorial-with-examples/">Joining(Strings) with Collectors</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8250" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8250"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Collection Enhancements</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8283" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8283"><a href="https://www.javabrahman.com/java-8/java-8-iterable-foreach-iterator-remove-methods-tutorial-with-examples/">Part 1- Iterable.forEach, Iterator.remove</a></li>
+		<li id="menu-item-8284" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8284"><a href="https://www.javabrahman.com/java-8/java-8-collection-removeif-method-tutorial-with-examples/">Part 2- Collection.removeIf</a></li>
+		<li id="menu-item-8286" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8286"><a href="https://www.javabrahman.com/java-8/java-8-list-sort-list-replaceall-methods-tutorial-with-examples/">Part 3- List.sort, List.replaceAll</a></li>
+		<li id="menu-item-8285" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8285"><a href="https://www.javabrahman.com/java-8/java-8-maps-computeifabsent-computeifpresent-getordefault-methods-tutorial-with-examples/">Part 4- Multi-value map methods</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8280" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8280"><a href="https://www.javabrahman.com/java-8/the-complete-java-8-comparator-tutorial-with-examples/">Java 8 Comparators</a></li>
+</ul>
+</li>
+<li id="menu-item-8213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8213"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Algorithms</a>
+<ul class="sub-menu">
+	<li id="menu-item-8249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8249"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Sorting Algorithms</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8201"><a href="https://www.javabrahman.com/algorithms-in-java/bubble-sort-in-java/">Bubble Sort(with video)</a></li>
+		<li id="menu-item-8198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8198"><a href="https://www.javabrahman.com/algorithms-in-java/insertion-sort-in-java/">Insertion Sort(with video)</a></li>
+		<li id="menu-item-8199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8199"><a href="https://www.javabrahman.com/algorithms-in-java/selection-sort-in-java/">Selection Sort(with video)</a></li>
+		<li id="menu-item-8200" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8200"><a href="https://www.javabrahman.com/algorithms-in-java/merge-sort-in-java/">Merge Sort(with video)</a></li>
+		<li id="menu-item-8278" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8278"><a href="https://www.javabrahman.com/algorithms-in-java/radix-sort-algorithm-whiteboard-video-tutorial-with-java-code-walkthrough/">Radix Sort Video Tutorial</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8268" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8268"><a href="https://www.javabrahman.com/algorithms-in-java/euclidean-algorithm-for-greatest-common-divisor-gcd-in-java/">Euclidean – GCD</a></li>
+	<li id="menu-item-8282" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8282"><a href="https://www.javabrahman.com/algorithms-in-java/iterative-and-recursive-binary-search-algorithm-implementation-in-java/">Binary Search(with video)</a></li>
+</ul>
+</li>
+<li id="menu-item-8209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8209"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Concepts</a>
+<ul class="sub-menu">
+	<li id="menu-item-8211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8211"><a href="https://www.javabrahman.com/programming-principles/abstraction-vs-encapsulation-in-oops-with-examples/">Abstraction Vs Encapsulation</a></li>
+	<li id="menu-item-8210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8210"><a href="https://www.javabrahman.com/programming-principles/pipelines-in-computing-and-software-engineering/">Pipelines In Computing</a></li>
+	<li id="menu-item-8126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8126"><a href="https://www.javabrahman.com/programming-principles/short-circuiting-or-short-circuits-in-boolean-evaluations-in-programming-and-java/">Short-Circuits in Programming &amp; Java</a></li>
+	<li id="menu-item-8149" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8149"><a href="https://www.javabrahman.com/programming-principles/imperative-versus-functional-programming-paradigms-conceptual/">Imperative vs Functional Programming</a></li>
+</ul>
+</li>
+<li id="menu-item-8216" class="home-menu-ondesktp-only menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8216"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Design</a>
+<ul class="sub-menu">
+	<li id="menu-item-8248" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8248"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">SOLID Principles</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8245" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8245"><a href="https://www.javabrahman.com/programming-principles/single-responsibility-principle-with-example-in-java/">Single Responsibility Principle</a></li>
+		<li id="menu-item-8215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8215"><a href="https://www.javabrahman.com/programming-principles/open-closed-principle-with-examples-in-java/">Open Closed Principle</a></li>
+		<li id="menu-item-8267" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8267"><a href="https://www.javabrahman.com/programming-principles/liskov-substitution-principal-java-example/">Liskov Substitution Principal</a></li>
+		<li id="menu-item-8273" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8273"><a href="https://www.javabrahman.com/programming-principles/interface-segregation-principle-explained-examples-java/">Interface Segregation Principle</a></li>
+		<li id="menu-item-8274" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8274"><a href="https://www.javabrahman.com/programming-principles/dependency-inversion-principle-example-java/">Dependency Inversion Principle</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8217"><a href="https://www.javabrahman.com/design-patterns/gof-gang-four-design-patterns/">GOF/Gang Of Four Patterns Overview</a></li>
+	<li id="menu-item-8236" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8236"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">GOF Creational Patterns</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8247" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8247"><a href="https://www.javabrahman.com/design-patterns/prototype-design-pattern-in-java/">Prototype Pattern</a></li>
+		<li id="menu-item-8233" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8233"><a href="https://www.javabrahman.com/design-patterns/factory-method-design-pattern-in-java/">Factory Pattern</a></li>
+		<li id="menu-item-8262" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8262"><a href="https://www.javabrahman.com/design-patterns/builder-design-pattern-in-java/">Builder Pattern</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8235"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">GOF Structural Patterns</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8220"><a href="https://www.javabrahman.com/design-patterns/adapter-design-pattern-in-java/">Adapter Pattern</a></li>
+		<li id="menu-item-8223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8223"><a href="https://www.javabrahman.com/design-patterns/facade-design-pattern-in-java/">Facade Pattern</a></li>
+		<li id="menu-item-8232" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8232"><a href="https://www.javabrahman.com/design-patterns/proxy-design-pattern-in-java/">Proxy Pattern</a></li>
+		<li id="menu-item-8269" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8269"><a href="https://www.javabrahman.com/design-patterns/composite-design-pattern-in-java/">Composite Pattern</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8234"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">GOF Behavioral Patterns</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8218" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8218"><a href="https://www.javabrahman.com/design-patterns/template-method-design-pattern-in-java/">Template Method Pattern</a></li>
+		<li id="menu-item-8219" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8219"><a href="https://www.javabrahman.com/design-patterns/strategy-design-pattern-in-java/">Strategy Pattern</a></li>
+		<li id="menu-item-8237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8237"><a href="https://www.javabrahman.com/design-patterns/visitor-design-pattern-in-java/">Visitor Pattern</a></li>
+		<li id="menu-item-8241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8241"><a href="https://www.javabrahman.com/design-patterns/memento-design-pattern-in-java/">Memento Pattern</a></li>
+		<li id="menu-item-8243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8243"><a href="https://www.javabrahman.com/design-patterns/state-design-pattern-in-java/">State Pattern</a></li>
+		<li id="menu-item-8263" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8263"><a href="https://www.javabrahman.com/design-patterns/observer-design-pattern-in-java/">Observer Pattern</a></li>
+		<li id="menu-item-8264" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8264"><a href="https://www.javabrahman.com/design-patterns/chain-of-responsibility-design-pattern-in-java/">Chain of Responsibility</a></li>
+		<li id="menu-item-8266" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8266"><a href="https://www.javabrahman.com/design-patterns/iterator-design-pattern-in-java/">Iterator Pattern</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-8174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8174"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">Core Java</a>
+<ul class="sub-menu">
+	<li id="menu-item-8175" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8175"><a href="https://www.javabrahman.com/corejava/understanding-equals-and-hashcode-contract-when-using-collections-in-java/">equals() and hashcode()</a></li>
+	<li id="menu-item-8176" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8176"><a href="https://www.javabrahman.com/corejava/cloning-in-java-shallow-copy-and-deep-copy-tutorial-with-examples/">Cloning – Shallow &amp; Deep Copy</a></li>
+	<li id="menu-item-8177" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8177"><a href="https://www.javabrahman.com/corejava/java-wrapper-classes-tutorial-with-examples/">Wrapper Classes</a></li>
+	<li id="menu-item-8178" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8178"><a href="https://www.javabrahman.com/corejava/override-annotation-java-tutorial-examples/">@Override annotation</a></li>
+	<li id="menu-item-8179" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8179"><a href="https://www.javabrahman.com/corejava/deprecation-java-deprecated-annotation-javadoc-tag-tutorial-examples/">Deprecation@Deprecated</a></li>
+	<li id="menu-item-8188" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8188"><a href="https://www.javabrahman.com/corejava/the-complete-java-enums-tutorial-with-examples/">Java Enums Tutorial</a></li>
+</ul>
+</li>
+<li id="menu-item-8214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8214"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/#">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-8256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8256"><a href="https://www.javabrahman.com/about-java-brahman/">About JavaBrahman</a></li>
+	<li id="menu-item-8271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8271"><a href="https://www.javabrahman.com/javabrahmanweekly/">JavaBrahmanWeekly!</a></li>
+	<li id="menu-item-8259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8259"><a href="https://www.javabrahman.com/privacy-policy-2/">Privacy Policy</a></li>
+	<li id="menu-item-8261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8261"><a href="https://www.javabrahman.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-8254" class="home-menu-ondesktp-only menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8254"><a href="https://www.javabrahman.com/">Home Page</a></li>
+<li id="menu-item-8272" class="blink_me_ebook menu-item menu-item-type-post_type menu-item-object-page menu-item-8272"><a href="https://www.javabrahman.com/javabrahmanweekly/">Free E-Book!!</a></li>
+</ul></div>			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="https://www.javabrahman.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			<div class="code-block code-block-5" style="text-align: center; margin: 0 auto 4px;">
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- link ads above post -->
+<ins class="adsbygoogle" style="display: none !important; width: 728px; height: 15px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="6146367383" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_1" name="aswift_1" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 728px; height: 15px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="15" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<article id="post-1199" class="post-1199 post type-post status-publish format-standard has-post-thumbnail hentry category-java-8">
+		<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://www.javabrahman.com/category/java-8/" rel="category tag">Java 8</a></span>
+		</div>
+		<h1 class="entry-title">Java 8 Streams API Tutorial with Examples</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/" rel="bookmark"><time class="entry-date" datetime="2015-10-09T15:16:03+05:30">October 9, 2015</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://www.javabrahman.com/articles/admin/" rel="author">admin</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<!-- Code Added to show excerpts in Archive pages instead of full posts - part 1 - start -->
+<!-- Code Added to show excerpts in Archive pages instead of full posts - part 1 - end-->	
+	<div class="entry-content">
+		<div class="code-block code-block-1 ai-track" data-ai="WzEsMCwiVG9wIG9mIFBvc3RzLUFkc2Vuc2UgLSBEZXNrdG9wIiwiIiwxXQ==" style="text-align: center; margin: -14px auto 10px;">
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- Top of content - 728X90 Fixed - Desktop -->
+<ins class="adsbygoogle" style="display: none !important; width: 728px; height: 90px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="7681565789" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 728px; height: 90px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<div class="at-above-post addthis_tool" data-url="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/"></div><p><span class="jb-font-17-subtitle">Java 8 Streams API tutorial starts off with defining Java 8 Streams, followed by an explanation of the important terms making up the Streams definition. We will then look at Java 8 code examples showing how to exactly use Streams API. <strong>By the end of this tutorial you should feel confident of writing your first program utilising Java 8 Streams API.</strong></span></p>
+<p><span class="jb-highlight-lightblue-bold-18">What are Streams/Defining Streams</span><br>
+A Stream in Java is a sequence of elements supporting parallel and aggregate operations. This sequence of elements are obtained from a source. Further, streams in Java 8 support processing of these elements through operations defined in a declarative way. These operations are linked-up according to the <a id="internal-link" href="https://www.javabrahman.com/programming-principles/pipelines-in-computing-and-software-engineering/">principle of pipelines<br>
+<span id="tooltip-span">Click to Understand the concept of Pipelines in Computing</span></a> and they access the elements via Internal Iterations.</p>
+<p><span class="jb-highlight-lightblue-bold-18">Conceptual terms making up the Streams definition</span><br>
+Streams definition given above has a lot of terms put together. To understand this definition in its totality we need to understand each of these terms. Lets look at them one-by-one: </p>
+<ul style="padding-left:10px;">
+<li> <strong>Sequence of elements</strong> – A stream provides an interface to a sequenced set of values of a specific type. For e.g. <code class="nl-code-intext">Stream&lt;Integer&gt;</code> is a stream of type <code class="nl-code-intext">Integer</code>.
+</li>
+<li><strong>Source of stream elements</strong> – Streams are defined as originating from a specific source which can be collections, arrays, input-output(I/O) resources etc
+</li>
+<li><strong>Operations on stream elements</strong> – As the stream’s elements are encountered, several pre-defined operations can be declared to act on the stream elements to map, reduce and collect these elements.
+</li>
+<li><strong>Parallel and aggregate operations</strong> – The operations working on these stream of elements can work in parallel on multi-core architectures. Aggregate operations act on elements in the stream in a sequence and end up aggregating data into an end value.
+</li>
+<li><strong>Pipeline of Operations</strong> – Various operations which have been declared to act on a stream work together based on the concept of Pipelines(<a id="internal-link" href="https://www.javabrahman.com/programming-principles/pipelines-in-computing-and-software-engineering/">link to tutorial<br>
+<span id="tooltip-span">Click to Understand the concept of Pipelines in Computing</span></a>). I.e. output of one stream operation acts as input of the next stream operation.
+</li>
+<li><strong>Internal iterations</strong>– Internal iterations delegate the work of iterating to the Streams library. The programmer just needs to specify in a declarative manner as to which operation has to be applied to the stream of elements.
+</li>
+</ul>
+<p><span class="jb-highlight-lightblue-bold-18">Streams API usage example</span><br>
+To start with, let us look at a  class <code class="nl-code-intext">Employee.java</code> which has –</p><div class="code-block code-block-3" style="text-align: center; margin: -8px auto 18px;">
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- 4th Para - Desktop - 728x90 fixed -->
+<ins class="adsbygoogle" style="display: none !important; width: 728px; height: 90px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="1076628980" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_3" name="aswift_3" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 728px; height: 90px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads(2).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<ul style="padding-left:15px;list-style: dashed;">
+<li>2 instance attributes – <code class="nl-code-intext">name</code> &amp; <code class="nl-code-intext">age</code>. </li>
+<li>Getters and setters for these attributes.</li>
+<li>A constructor with both attributes.</li>
+<li>The <code class="nl-code-intext">toString()</code> method.</li>
+</ul>
+<div class="su-box su-box-style-soft for-shortcodebox" id="" style="border-color:#c98710;border-radius:4px"><div class="su-box-title" style="background-color:#fcba43;color:#00000;border-top-left-radius:2px;border-top-right-radius:2px">Employee.java</div><div class="su-box-content su-u-clearfix su-u-trim" style="border-bottom-left-radius:2px;border-bottom-right-radius:2px">
+<div><div id="highlighter_323090" class="syntaxhighlighter nogutter  java "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">package</code> <code class="java plain">com.javabrahman.java8;</code></div><div class="line number2 index1 alt1"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">Employee{</code></div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java keyword">private</code> <code class="java plain">String name;</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java keyword">private</code> <code class="java plain">Integer age;</code></div><div class="line number5 index4 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java plain">Employee(String name, Integer age){</code></div><div class="line number6 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">this</code><code class="java plain">.name=name;</code></div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">this</code><code class="java plain">.age=age;</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">} </code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java plain">String getName(){</code></div><div class="line number10 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">return</code> <code class="java plain">name;</code></div><div class="line number11 index10 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number12 index11 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">setName(String name){</code></div><div class="line number13 index12 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">this</code><code class="java plain">.name=name;</code></div><div class="line number14 index13 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">} </code></div><div class="line number15 index14 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java plain">Integer getAge(){</code></div><div class="line number16 index15 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">return</code> <code class="java keyword">this</code><code class="java plain">.age;</code></div><div class="line number17 index16 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">} </code></div><div class="line number18 index17 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">setAge(Integer age){</code></div><div class="line number19 index18 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">this</code><code class="java plain">.age=age;</code></div><div class="line number20 index19 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">}&nbsp; </code></div><div class="line number21 index20 alt2"><code class="java spaces">&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java plain">String toString(){</code></div><div class="line number22 index21 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">return</code> <code class="java string">"Employee Name:"</code><code class="java plain">+</code><code class="java keyword">this</code><code class="java plain">.name</code></div><div class="line number23 index22 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">+</code><code class="java string">"&nbsp; Age:"</code><code class="java plain">+</code><code class="java keyword">this</code><code class="java plain">.age;</code></div><div class="line number24 index23 alt1"><code class="java spaces">&nbsp;&nbsp;</code><code class="java plain">} </code></div><div class="line number25 index24 alt2"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+</div></div>
+Next I have a class called <code class="nl-code-intext">BasicStreams.java</code>, given below, in which I have – <p></p>
+<ul id="code-explanation-black" style="padding-left:15px;">
+<li>A static list of employees called <code>employeeList </code></li>
+<li><code>main()</code> method where I have my streams-based filter logic</li>
+<li>I initialise my list of Employees with 5 Employee Objects using the 2-parameter <code>Employee</code> constructor which utilises the <code>Arrays.asList()</code> method</li>
+</ul>
+<div class="su-box su-box-style-soft for-shortcodebox" id="" style="border-color:#c98710;border-radius:4px"><div class="su-box-title" style="background-color:#fcba43;color:#00000;border-top-left-radius:2px;border-top-right-radius:2px">Streams usage example - BasicStreams.java</div><div class="su-box-content su-u-clearfix su-u-trim" style="border-bottom-left-radius:2px;border-bottom-right-radius:2px">
+<div><div id="highlighter_267604" class="syntaxhighlighter nogutter  java"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">package</code> <code class="java plain">com.javabrahman.java8;</code></div><div class="line number2 index1 alt1"><code class="java keyword">import</code> <code class="java plain">java.util.List;</code></div><div class="line number3 index2 alt2"><code class="java keyword">import</code> <code class="java plain">java.util.Arrays;</code></div><div class="line number4 index3 alt1"><code class="java keyword">import</code> <code class="java keyword">static</code> <code class="java plain">java.util.stream.Collectors.toList;</code></div><div class="line number5 index4 alt2"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">BasicStreams {</code></div><div class="line number6 index5 alt1"><code class="java spaces">&nbsp;</code><code class="java keyword">static</code> <code class="java plain">List&lt;Employee&gt; employeeList=</code></div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Arrays.asList(</code><code class="java keyword">new</code> <code class="java plain">Employee(</code><code class="java string">"Tom Jones"</code><code class="java plain">, </code><code class="java value">45</code><code class="java plain">), </code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">new</code> <code class="java plain">Employee(</code><code class="java string">"Harry Major"</code><code class="java plain">, </code><code class="java value">25</code><code class="java plain">),</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">new</code> <code class="java plain">Employee(</code><code class="java string">"Ethan Hardy"</code><code class="java plain">, </code><code class="java value">65</code><code class="java plain">),</code></div><div class="line number10 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">new</code> <code class="java plain">Employee(</code><code class="java string">"Nancy Smith"</code><code class="java plain">, </code><code class="java value">15</code><code class="java plain">),</code></div><div class="line number11 index10 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">new</code> <code class="java plain">Employee(</code><code class="java string">"Deborah Sprightly"</code><code class="java plain">, </code><code class="java value">29</code><code class="java plain">));</code></div><div class="line number12 index11 alt1"><code class="java spaces">&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String args[]){</code></div><div class="line number13 index12 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code><code class="java plain">List&lt;Employee&gt; filteredList = employeeList.stream()</code></div><div class="line number14 index13 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">.limit(</code><code class="java value">2</code><code class="java plain">)</code></div><div class="line number15 index14 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">.collect(toList());</code></div><div class="line number16 index15 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code><code class="java plain">filteredList.forEach(System.out::println);</code></div><div class="line number17 index16 alt2"><code class="java spaces">&nbsp;</code><code class="java plain">} </code></div><div class="line number18 index17 alt1"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+</div></div>
+<strong>&nbsp;OUTPUT of the above code</strong><div class="su-note" id="" style="border-color:#000000;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;"><div class="su-note-inner su-u-clearfix su-u-trim" style="background-color:#1a1a1a;border-color:#e6e6e6;color:#DAD9D7;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;">Employee Name:Tom Jones  Age:45<br>
+Employee Name:Harry Major  Age:25</div></div>
+<span class="jb-highlight-lightblue-bold-17">Explanation of the code</span><p></p>
+<ul id="code-explanation-black" style="padding-left:12px;">
+<li>The program starts with static import of <code>Collector </code>Class’ static <code>toList()</code> method. This method is used to get a list from a stream</li>
+<li>In the <code>main()</code> method, <span class="jb-highlight-lightblue"><code>stream()</code> is invoked on employeeList</span>. The method <code>stream()</code> has been newly introduced in Java 8 on the interface Collection which List interface extends. This <code>stream()</code> method gives an instance <code>java.util.Stream</code> as the return type</li>
+<li>The <span class="jb-highlight-lightblue">stream of employees is then passed(or pipe-lined) to the function <code>limit()</code></span>. The <code>limit()</code> function puts a limit to the maximum number of elements which will be picked from the stream. In the given example I have passed the value 2, hence the current stream is now limited to first 2 elements. Also, note that <code>limit()</code> is an <a id="internal-link" href="https://www.javabrahman.com/java-8/understanding-java-8-streams-operations-intermediate-and-terminal-operations-tutorial-with-examples/">intermediate operation<span id="tooltip-span">Click to Read Tutorial explaining intermediate &amp; terminal Stream operations</span></a>, i.e. the stream processing does not end with <code>limit() </code>method.</li>
+<li>The <code>collect()</code> method is then invoked on the stream(which now has only 2 elements). <code>Collect()</code> uses a <code>Collector </code>of a specific type which in the given example is of type <code>List</code>(returned by the static <code>toList()</code> method of <code>Collectors</code> class). To simplify the previous statements, <span class="jb-highlight-lightblue"><code>collect()</code> uses the <code>toList()</code> method to return a list equivalent of the stream</span> pipe-lined into it(named <code>filteredList</code>). Note that <code>collect()</code> is a <a id="internal-link" href="https://www.javabrahman.com/java-8/understanding-java-8-streams-operations-intermediate-and-terminal-operations-tutorial-with-examples/">terminal operation<span id="tooltip-span">Click to Read Tutorial explaining intermediate &amp; terminal Stream operations</span></a>, i.e. the processing of the stream ends with the <code>collect()</code> method.</li>
+<li>At the end, I simply use a Java 8 style <code>forEach </code>loop and a <a id="internal-link" href="https://www.javabrahman.com/java-8/java-8-method-references-tutorial-examples/">Method Reference<br>
+<span id="tooltip-span">Click to Read Tutorial on Java 8’s Method References</span></a> to the  <code>System.out.println()</code> method to print all the elements in the resultant <code>filteredList</code>.</li>
+<li>As expected the 2 employee objects are printed using the overridden <code>Employee.toString()</code> method.</li>
+</ul>
+<p><span class="jb-highlight-lightblue-bold-18">Summary</span><br>
+In the above tutorial we saw what Java 8 Streams are, understood the various terms which describe a Stream, and finally saw a basic example of how to start using Streams in your programs using the intermediate &amp; terminal operations.<br>
+</p><div class="su-note" id="" style="border-color:#e1e1aa;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;"><div class="su-note-inner su-u-clearfix su-u-trim" style="background-color:#fbfbc4;border-color:#ffffff;color:#000000;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;">
+<div id="end-links"><strong style="font-size:1.1em;">Java 8 Streams API tutorials on JavaBrahman</strong><br>
+<a href="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/">Streams API – Introduction &amp; Basics<span id="tooltip-span">Click to Read tutorial on Streams API Basics</span></a> <a href="https://www.javabrahman.com/java-8/understanding-java-8-streams-operations-intermediate-and-terminal-operations-tutorial-with-examples/">Understanding Stream Operations | Intermediate and Terminal Operations<span id="tooltip-span">Click to Read Tutorial on Stream Operations Overview</span></a> <a href="https://www.javabrahman.com/java-8/java-8-mapping-with-streams-map-flatmap-methods-tutorial-with-examples/">Mapping with Streams using map and flatMap methods<span id="tooltip-span">Click to Read how Mapping with Java8 Streams works</span></a> <a href="https://www.javabrahman.com/java-8/java-8-filtering-and-slicing-streams-tutorial-with-examples/">Filtering and Slicing with Streams using filter,distinct,limit,skip methods<span id="tooltip-span">Click to Read how Filtering and Slicing with Java8 Streams works</span></a> <a href="https://www.javabrahman.com/java-8/java-8-matching-with-streams-allmatch-anymatch-nonematch-methods-tutorial-examples/">Matching with Streams using allMatch,anyMatch,noneMatch methods<span id="tooltip-span">Click to Read tutorial on matching with Streams API</span></a> <a href="https://www.javabrahman.com/java-8/java-8-finding-with-streams-findfirst-findany-methods-tutorial-examples/">Stream API’s findFirst,findAny methods’ tutorial<span id="tooltip-span">Click to Read tutorial on findFirst() and findAny() methods of Streams API</span></a> <a href="https://www.javabrahman.com/java-8/java-8-how-to-peek-into-a-running-stream-peek-method-tutorial-with-examples/">‘Peeking’ into a running Stream with Stream.peek() method<span id="tooltip-span">Click to Read tutorial on Stream.peek() method</span></a> <a href="https://www.javabrahman.com/java-8/java-8-streams-api-creating-infinite-streams-with-iterate-and-generate-methods/">Creating Infinite Streams with iterate\generate methods<span id="tooltip-span">Click to Read tutorial on Creating Infinite Streams</span></a> <a href="https://www.javabrahman.com/java-8/java-8-reducing-with-streams-reduce-method-tutorial-with-examples/">Reducing Streams using Streams.reduce method<span id="tooltip-span">Click to Read tutorial on Reducing Streams</span></a></div>
+</div></div>
+<div class="code-block code-block-47" style="margin: 8px auto; text-align: center; display: block; clear: both;">
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- 336X280 large rectangle below post content -->
+<ins class="adsbygoogle" style="display: none !important; width: 336px; height: 280px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="2371103784" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe id="aswift_4" name="aswift_4" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 336px; height: 280px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="336" height="280" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads(3).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!4" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div class="su-spacer" style="height:10px"></div>
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- Link Ads below post -->
+<ins class="adsbygoogle" style="display: none !important; height: 90px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="2204494582" data-ad-format="link" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:774px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:774px;background-color:transparent;"></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<p>&nbsp;</p>
+<span id="dprv_cp-v4.10" lang="en" xml:lang="en" class="notranslate" translate="no" style="vertical-align:baseline; padding: 3px 3px 3px 3px; margin-top:2px; margin-bottom:2px; border-collapse:separate; line-height:16px;float:none; font-family: Tahoma, MS Sans Serif; font-size:13px;border:1px solid #bbbbbb;background:#FFFFFF none;display:inline-block;" title="certified 17 September 2019 05:09:39 UTC by Digiprove certificate P1226338"><a href="https://www.digiprove.com/show_certificate.aspx?id=P1226338" target="_blank" rel="copyright" style="height:16px; line-height: 16px; border:0px; padding:0px; margin:0px; float:none; display:inline;background:transparent none; line-height:normal; font-family: Tahoma, MS Sans Serif; font-style:normal; font-weight:normal; font-size:11px;"><img src="./Java 8 Streams API Tutorial with Examples_files/dp_seal_trans_16x16.png" style="max-width:16px;vertical-align:-3px; display:inline; border:0px; margin:0px; padding:0px; float:none; background:transparent none" alt="Digiprove seal"><span style="font-family: Tahoma, MS Sans Serif; font-style:normal; font-size:11px; font-weight:normal; color:#636363; border:0px; float:none; display:inline; letter-spacing:normal; padding:0px; padding-left:8px; vertical-align:1px;margin-bottom:2px" onmouseover="this.style.color=&#39;#A35353&#39;;" onmouseout="this.style.color=&#39;#636363&#39;;">Copyright&nbsp;©&nbsp;2014-2020&nbsp;JavaBrahman.com,&nbsp;all&nbsp;rights&nbsp;reserved.</span></a><!--31BDA510B8358A0EBD7872AAC29EBFFD3398AE7171EF8C66BCB9839C67D956AF--></span><!-- AddThis Advanced Settings above via filter on the_content --><!-- AddThis Advanced Settings below via filter on the_content --><!-- AddThis Advanced Settings generic via filter on the_content --><!-- AddThis Share Buttons above via filter on the_content --><!-- AddThis Share Buttons below via filter on the_content --><div class="at-below-post addthis_tool" data-url="https://www.javabrahman.com/java-8/java-8-streams-api-tutorial-with-examples/"></div><!-- AddThis Share Buttons generic via filter on the_content --><!-- AI CONTENT END 1 -->
+	</div><!-- .entry-content -->
+<!-- If need to show 4 follow buttons below all posts then add the code here from Quick Code Snippets in One Note -->
+<!--<div class="jb-request-comments-posts">&nbsp;&nbsp;&#10137;&nbsp;&nbsp;Queries & Comments...</div>-->
+<!-- Code Added to show excerpts in Archive pages instead of full posts - part 2 - start -->
+<!-- Code Added to show excerpts in Archive pages instead of full posts - part 2 - end -->
+
+	</article><!-- #post-## -->
+		<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<a href="https://www.javabrahman.com/java-8/constructor-references-java-8-simplified-tutorial/" rel="prev"><span class="meta-nav">Previous Post</span>Constructor References Java 8 Simplified Tutorial with examples</a><a href="https://www.javabrahman.com/corejava/understanding-static-imports-in-java-with-examples/" rel="next"><span class="meta-nav">Next Post</span>Understanding Static Imports in Java with Examples</a>			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
+				</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="content-sidebar" class="content-sidebar widget-area" role="complementary">
+<aside id="ai_widget-1" class="widget ai_widget"><div class="code-block code-block-49" style="margin: 8px 0; text-align: left;">
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- Desktop - Sidebar Top - 1st Ad Unit -->
+<ins class="adsbygoogle" style="display: none !important; width: 300px; height: 250px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="9446982287" data-adsbygoogle-status="done"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe id="aswift_6" name="aswift_6" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 300px; height: 250px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads(4).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!6" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</aside><aside id="categories-3" class="widget widget_categories"><h1 class="widget-title">Click on a category to view all articles</h1>
+			<ul>
+					<li class="cat-item cat-item-22"><a href="https://www.javabrahman.com/category/algorithms-in-java/">Algorithms &amp; DS in Java</a> (7)
+</li>
+	<li class="cat-item cat-item-9"><a href="https://www.javabrahman.com/category/corejava/">Core Java</a> (24)
+</li>
+	<li class="cat-item cat-item-10"><a href="https://www.javabrahman.com/category/design-patterns/">Design Patterns</a> (17)
+</li>
+	<li class="cat-item cat-item-6"><a href="https://www.javabrahman.com/category/eclipse-plugins/">Eclipse Plugins</a> (3)
+</li>
+	<li class="cat-item cat-item-15"><a href="https://www.javabrahman.com/category/error-handling/">Error Handling</a> (6)
+</li>
+	<li class="cat-item cat-item-24"><a href="https://www.javabrahman.com/category/gen-java-programs/">General Java Programs</a> (9)
+</li>
+	<li class="cat-item cat-item-16"><a href="https://www.javabrahman.com/category/java-8/">Java 8</a> (60)
+</li>
+	<li class="cat-item cat-item-11"><a href="https://www.javabrahman.com/category/java-9-beyond/">Java 9 &amp; beyond…</a> (4)
+</li>
+	<li class="cat-item cat-item-8"><a href="https://www.javabrahman.com/category/javascripthtml/">JavaScript and HTML</a> (2)
+</li>
+	<li class="cat-item cat-item-5"><a href="https://www.javabrahman.com/category/jpa/" title="Java Persistence API tutorials
+">JPA</a> (6)
+</li>
+	<li class="cat-item cat-item-17"><a href="https://www.javabrahman.com/category/latest-in-tech/">Latest in Tech</a> (4)
+</li>
+	<li class="cat-item cat-item-25"><a href="https://www.javabrahman.com/category/maven/">Maven</a> (1)
+</li>
+	<li class="cat-item cat-item-12"><a href="https://www.javabrahman.com/category/newfeaturesjava7/">New Features in Java 7</a> (3)
+</li>
+	<li class="cat-item cat-item-19"><a href="https://www.javabrahman.com/category/node-js/">Node.js</a> (1)
+</li>
+	<li class="cat-item cat-item-26"><a href="https://www.javabrahman.com/category/programming-principles/">Programming &amp; Design Principles</a> (9)
+</li>
+	<li class="cat-item cat-item-20"><a href="https://www.javabrahman.com/category/quick-tips/">Quick Coding Tips</a> (19)
+</li>
+	<li class="cat-item cat-item-14"><a href="https://www.javabrahman.com/category/reviews/">Reviews</a> (1)
+</li>
+			</ul>
+
+			</aside><aside id="ai_widget-4" class="widget ai_widget"><div class="code-block code-block-50" style="margin: auto 0;">
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- 300X600 - sidebar-ad -->
+<ins class="adsbygoogle" style="display: none !important; width: 300px; height: 600px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="3598672582" data-adsbygoogle-status="done"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe id="aswift_7" name="aswift_7" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 300px; height: 600px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads(5).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!7" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</aside><aside id="yikes_easy_mc_widget-1" class="widget widget_yikes_easy_mc_widget"><h1 class="widget-title">Get Free E-Book on Lambda Expressions in Java 8</h1>
+	<section id="yikes-mailchimp-container-2" class="yikes-mailchimp-container yikes-mailchimp-container-2 ">
+	<section class="yikes-mailchimp-form-description yikes-mailchimp-form-description-2">3500 Subscribers and Counting...</section>			<form id="jbweeklyyikes-sidebar-2" class="yikes-easy-mc-form yikes-easy-mc-form-2  " method="POST" data-attr-form-id="2">
+
+													<label for="yikes-easy-mc-form-2-FNAME" class="FNAME-label yikes-mailchimp-field-required ">
+
+										<!-- dictate label visibility -->
+																					<span class="FNAME-label">
+												First Name											</span>
+										
+										<!-- Description Above -->
+										
+										<input id="yikes-easy-mc-form-2-FNAME" name="FNAME" placeholder="first name" class="yikes-easy-mc-text " required="required" type="text" value="">
+
+										<!-- Description Below -->
+										
+									</label>
+																		<label for="yikes-easy-mc-form-2-LNAME" class="LNAME-label ">
+
+										<!-- dictate label visibility -->
+																					<span class="LNAME-label">
+												Last Name											</span>
+										
+										<!-- Description Above -->
+										
+										<input id="yikes-easy-mc-form-2-LNAME" name="LNAME" placeholder="last name" class="yikes-easy-mc-text " type="text" value="">
+
+										<!-- Description Below -->
+										
+									</label>
+																		<label for="yikes-easy-mc-form-2-EMAIL" class="EMAIL-label yikes-mailchimp-field-required ">
+
+										<!-- dictate label visibility -->
+																					<span class="EMAIL-label">
+												Email Address											</span>
+										
+										<!-- Description Above -->
+										
+										<input id="yikes-easy-mc-form-2-EMAIL" name="EMAIL" placeholder="email address" class="yikes-easy-mc-email " required="required" type="email" value="">
+
+										<!-- Description Below -->
+										
+									</label>
+									
+				<!-- Honeypot Trap -->
+				<input type="hidden" name="yikes-mailchimp-honeypot" id="yikes-mailchimp-honeypot-2" value="">
+
+				<!-- List ID -->
+				<input type="hidden" name="yikes-mailchimp-associated-list-id" id="yikes-mailchimp-associated-list-id-2" value="c89b985f96">
+
+				<!-- The form that is being submitted! Used to display error/success messages above the correct form -->
+				<input type="hidden" name="yikes-mailchimp-submitted-form" id="yikes-mailchimp-submitted-form-2" value="2">
+
+				<!-- Submit Button -->
+				<button type="submit" class="yikes-easy-mc-submit-button yikes-easy-mc-submit-button-2 btn btn-primary "> <span class="yikes-mailchimp-submit-button-span-text">Subscribe Now!</span></button>				<!-- Nonce Security Check -->
+				<input type="hidden" id="yikes_easy_mc_new_subscriber_2" name="yikes_easy_mc_new_subscriber" value="7e3e47cc13">
+				<input type="hidden" name="_wp_http_referer" value="/java-8/java-8-streams-api-tutorial-with-examples/">				
+			</form>
+			<!-- Mailchimp Form generated by Easy Forms for Mailchimp v6.7.0 (https://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/) -->
+
+			</section>
+	</aside><aside id="ai_widget-7" class="widget ai_widget"><div class="code-block code-block-51" style="margin: 8px 0; text-align: left; max-height:610px;">
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- Desktop - Sidebar - 3rd - 300X250 -->
+<ins class="adsbygoogle" style="display: none !important; width: 300px; height: 250px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="9746051521" data-adsbygoogle-status="done"><ins id="aswift_8_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_8_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe id="aswift_8" name="aswift_8" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 300px; height: 250px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads(6).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!8" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</aside><aside id="ai_widget-8" class="widget ai_widget"><div class="code-block code-block-57" style="margin: 8px auto 8px 0; text-align: left; display: block; clear: both;">
+<script async="" src="./Java 8 Streams API Tutorial with Examples_files/f(1).txt"></script>
+<!-- Desktop - Sidebar - 4th - 300X250 -->
+<ins class="adsbygoogle" style="display: none !important; width: 300px; height: 250px;" data-ad-client="ca-pub-4674758778510710" data-ad-slot="1110686094" data-adsbygoogle-status="done"><ins id="aswift_9_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_9_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe id="aswift_9" name="aswift_9" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 300px; height: 250px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads(7).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!9" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</aside></div><!-- #content-sidebar -->
+<div id="secondary">
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+			</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+
+			</div><!-- .site-info (DRP - place your footer display stuff here)-->
+		</footer><!-- #colophon -->
+	</div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left: 0px; position: absolute; top: 0px; border: 0px; display: none !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./Java 8 Streams API Tutorial with Examples_files/ads(8).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!0" data-load-complete="true"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_2669883072081" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Java 8 Streams API Tutorial with Examples_files/saved_resource.html"></iframe><!-- #page -->
+
+	All original content on these pages is fingerprinted and certified by <a href="https://www.digiprove.com/" target="_blank">Digiprove</a><script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/shCore.js.download" id="syntaxhighlighter-core-js"></script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/shBrushJava.js.download" id="syntaxhighlighter-brush-java-js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://www.javabrahman.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "https://www.javabrahman.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeEclipse.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['gutter'] = false;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script data-cfasync="false" type="text/javascript">if (window.addthis_product === undefined) { window.addthis_product = "wpp"; } if (window.wp_product_version === undefined) { window.wp_product_version = "wpp-6.2.6"; } if (window.addthis_share === undefined) { window.addthis_share = {"passthrough":{"twitter":{"via":"javabrahman"}}}; } if (window.addthis_config === undefined) { window.addthis_config = {"data_track_clickback":true,"ui_atversion":"300"}; } if (window.addthis_plugin_info === undefined) { window.addthis_plugin_info = {"info_status":"enabled","cms_name":"WordPress","plugin_name":"Share Buttons by AddThis","plugin_version":"6.2.6","plugin_mode":"AddThis","anonymous_profile_id":"wp-5b6eeb494ddc5044d153c46f7600e871","page_info":{"template":"posts","post_type":""},"sharing_enabled_on_post_via_metabox":false}; } 
+                    (function() {
+                      var first_load_interval_id = setInterval(function () {
+                        if (typeof window.addthis !== 'undefined') {
+                          window.clearInterval(first_load_interval_id);
+                          if (typeof window.addthis_layers !== 'undefined' && Object.getOwnPropertyNames(window.addthis_layers).length > 0) {
+                            window.addthis.layers(window.addthis_layers);
+                          }
+                          if (Array.isArray(window.addthis_layers_tools)) {
+                            for (i = 0; i < window.addthis_layers_tools.length; i++) {
+                              window.addthis.layers(window.addthis_layers_tools[i]);
+                            }
+                          }
+                        }
+                     },1000)
+                    }());
+                </script> <script data-cfasync="false" type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/addthis_widget.js.download" async="async"></script><link rel="stylesheet" id="yikes-inc-easy-mailchimp-public-styles-css" href="./Java 8 Streams API Tutorial with Examples_files/yikes-inc-easy-mailchimp-extender-public.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="su-shortcodes-css" href="./Java 8 Streams API Tutorial with Examples_files/shortcodes.css" type="text/css" media="all">
+<script type="text/javascript" id="disqus_count-js-extra">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"javabrahman"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/comment_count.js.download" id="disqus_count-js"></script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/functions.js.download" id="twentyfourteen-script-js"></script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/fitvids.min.js.download" id="__ytprefsfitvids__-js"></script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/wp-embed.min.js.download" id="wp-embed-js"></script>
+<script type="text/javascript" id="yikes-easy-mc-ajax-js-extra">
+/* <![CDATA[ */
+var yikes_mailchimp_ajax = {"ajax_url":"https:\/\/www.javabrahman.com\/wp-admin\/admin-ajax.php","page_data":"1199","interest_group_checkbox_error":"This field is required.","preloader_url":"https:\/\/www.javabrahman.com\/wp-content\/plugins\/yikes-inc-easy-mailchimp-extender\/includes\/images\/ripple.svg","loading_dots":"https:\/\/www.javabrahman.com\/wp-content\/plugins\/yikes-inc-easy-mailchimp-extender\/includes\/images\/bars.svg","ajax_security_nonce":"09b187f316","feedback_message_placement":"before"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/yikes-mc-ajax-forms.min.js.download" id="yikes-easy-mc-ajax-js"></script>
+<script type="text/javascript" id="form-submission-helpers-js-extra">
+/* <![CDATA[ */
+var form_submission_helpers = {"ajax_url":"https:\/\/www.javabrahman.com\/wp-admin\/admin-ajax.php","preloader_url":"https:\/\/www.javabrahman.com\/wp-admin\/images\/wpspin_light.gif","countries_with_zip":{"US":"US","GB":"GB","CA":"CA","IE":"IE","CN":"CN","IN":"IN","AU":"AU","BR":"BR","MX":"MX","IT":"IT","NZ":"NZ","JP":"JP","FR":"FR","GR":"GR","DE":"DE","NL":"NL","PT":"PT","ES":"ES"},"page_data":"1199"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/form-submission-helpers.min.js.download" id="form-submission-helpers-js"></script>
+
+<!-- Shortcodes Ultimate custom CSS - start -->
+<style type="text/css">
+.su-tabs {
+	margin: -0.95em 0 1.5em 0;
+	padding: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: #eee;
+}
+
+.su-tabs-nav span {
+	display: inline-block;
+	margin-right: 3px;
+	padding: 8px 11px 2px 11px;
+	font-size: 14px;
+	font-weight: 700;
+	color:#6E6E6E;
+	text-decoration:underline;
+	min-height: 28px;
+	line-height: 20px;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-right-radius: 10px;
+	cursor: pointer;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+
+.su-tabs-nav span:hover { background: #FFE88C; }
+
+.su-tabs-nav span.su-tabs-current {	font-size: 14px;font-weight: 700; color:#265E5E;background: #FFD119; cursor: default; }
+
+.su-tabs-nav span.su-tabs-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: default;
+}
+.su-tabs-nav span { background: #D4D4D4; }
+
+.su-tabs-pane {
+    max-height: 450px; /* Adjust */
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@media only screen and (max-width: 768px){
+	.su-tabs-pane {
+    	max-height: 450px; /* Adjust */
+    	overflow-x: hidden;
+    	overflow-y: scroll;
+		float: right;
+	}
+	
+	.su-tabs-mobile-stack .su-tabs-nav span {
+	    display: block;
+	    max-width: 180px;
+		float:left;
+	}
+}
+
+@media only screen and (max-width: 693px){
+	.su-tabs-mobile-stack .su-tabs-nav span {
+	    display: block;
+	    max-width: 180px;
+	    float: left;
+	}	
+	
+	.su-tabs-pane {
+    	max-height: 450px; /* Adjust */
+    	overflow-x: hidden;
+    	overflow-y: scroll;
+		float: left;
+		border-top-left-radius: 2px;
+    	border-top-right-radius: 2px;
+    	border-bottom-right-radius: 3px;
+    	border-bottom-left-radius: 3px;
+    	border: 2px #F2F2F2 solid;
+		margin-right: 12px;
+		padding-left: 10px;
+    	padding-right: 10px;
+	}
+}
+
+.su-tab-style-1  {
+	background: #e7e0bb;
+}
+
+.su-posts-default-loop .su-post-meta{
+	margin-bottom:0.45em;
+}	
+
+.su-note-inner {
+	padding-bottom:0.6em;
+	padding-top:0.6em;
+}
+
+.jb-servicebox{
+    border: 4px solid darkgrey;
+    border-radius: 5px;
+    padding-right: 0;
+}
+
+.su-service-title{
+	border-bottom: 4px solid darkgray;
+    background-color: #a0f7f8;
+    margin-bottom: 0.0;
+}	
+
+@media only screen and (max-device-width: 380px) and (orientation: portrait) {
+	.su-service-title{
+		line-height:24px !important;
+	}	
+}	
+
+.su-service-content{
+	padding: 0.6em !important;
+}
+
+.su-list ul li {
+    line-height: 1.5em;
+}
+
+/*Below CSS moves the icon of su_list down by 2 pixels to better align it with the bullet point*/
+.su-list ul li i {
+	top: 6px;
+}
+
+.su-post-comments-link{
+	display:none !important;
+}
+</style>
+<!-- Shortcodes Ultimate custom CSS - end -->
+
+<!--     ===== START Dreamgrow Scroll Triggered Box 2.3 =====   -->
+
+<div class="dgd_overlay"></div>
+
+<!--     ===== END OF Dreamgrow Scroll Triggered Box 2.3 =====   -->
+
+<script type="text/javascript" src="./Java 8 Streams API Tutorial with Examples_files/e-202041.js.download" async="async" defer="defer" style="display: none !important;"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.0.2',blog:'60984891',post:'1199',tz:'5.5',srv:'www.javabrahman.com'} ]);
+	_stq.push([ 'clickTrackerInit', '60984891', '1199' ]);
+</script>
+<script>
+/* <![CDATA[ */
+ai_front = {"insertion_before":"BEFORE","insertion_after":"AFTER","insertion_prepend":"PREPEND CONTENT","insertion_append":"APPEND CONTENT","insertion_replace_content":"REPLACE CONTENT","insertion_replace_element":"REPLACE ELEMENT","visible":"VISIBLE","hidden":"HIDDEN","fallback":"FALLBACK","automatically_placed":"Automatically placed by AdSense Auto ads code","cancel":"Cancel","use":"Use","add":"Add","parent":"Parent","cancel_element_selection":"Cancel element selection","select_parent_element":"Select parent element","css_selector":"CSS selector","use_current_selector":"Use current selector","element":"ELEMENT","path":"PATH","selector":"SELECTOR"};
+/* ]]> */
+function b2a(a){var b,c=0,l=0,f="",g=[];if(!a)return a;do{var e=a.charCodeAt(c++);var h=a.charCodeAt(c++);var k=a.charCodeAt(c++);var d=e<<16|h<<8|k;e=63&d>>18;h=63&d>>12;k=63&d>>6;d&=63;g[l++]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(e)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(h)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(k)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(d)}while(c<
+a.length);return f=g.join(""),b=a.length%3,(b?f.slice(0,b-3):f)+"===".slice(b||3)}function a2b(a){var b,c,l,f={},g=0,e=0,h="",k=String.fromCharCode,d=a.length;for(b=0;64>b;b++)f["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".charAt(b)]=b;for(c=0;d>c;c++)for(b=f[a.charAt(c)],g=(g<<6)+b,e+=6;8<=e;)((l=255&g>>>(e-=8))||d-2>c)&&(h+=k(l));return h}b64e=function(a){return btoa(encodeURIComponent(a).replace(/%([0-9A-F]{2})/g,function(b,a){return String.fromCharCode("0x"+a)}))};
+b64d=function(a){return decodeURIComponent(atob(a).split("").map(function(a){return"%"+("00"+a.charCodeAt(0).toString(16)).slice(-2)}).join(""))};
+var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.arrayIteratorImpl=function(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}};$jscomp.arrayIterator=function(a){return{next:$jscomp.arrayIteratorImpl(a)}};$jscomp.makeIterator=function(a){var b="undefined"!=typeof Symbol&&Symbol.iterator&&a[Symbol.iterator];return b?b.call(a):$jscomp.arrayIterator(a)};
+(function(a){if("function"===typeof define&&define.amd){define(a);var b=!0}"object"===typeof exports&&(module.exports=a(),b=!0);if(!b){var f=window.Cookies,c=window.Cookies=a();c.noConflict=function(){window.Cookies=f;return c}}})(function(){function a(){for(var a=0,c={};a<arguments.length;a++){var b=arguments[a],e;for(e in b)c[e]=b[e]}return c}function b(f){function c(){}function d(b,e,d){if("undefined"!==typeof document){d=a({path:"/"},c.defaults,d);"number"===typeof d.expires&&(d.expires=new Date(1*
+new Date+864E5*d.expires));d.expires=d.expires?d.expires.toUTCString():"";try{var g=JSON.stringify(e);/^[\{\[]/.test(g)&&(e=g)}catch(n){}e=f.write?f.write(e,b):encodeURIComponent(String(e)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent);b=encodeURIComponent(String(b)).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent).replace(/[\(\)]/g,escape);g="";for(var k in d)d[k]&&(g+="; "+k,!0!==d[k]&&(g+="="+d[k].split(";")[0]));return document.cookie=b+"="+e+g}}
+function e(a,b){if("undefined"!==typeof document){for(var c={},e=document.cookie?document.cookie.split("; "):[],d=0;d<e.length;d++){var g=e[d].split("="),h=g.slice(1).join("=");b||'"'!==h.charAt(0)||(h=h.slice(1,-1));try{var l=g[0].replace(/(%[0-9A-Z]{2})+/g,decodeURIComponent);h=(f.read||f)(h,l)||h.replace(/(%[0-9A-Z]{2})+/g,decodeURIComponent);if(b)try{h=JSON.parse(h)}catch(m){}c[l]=h;if(a===l)break}catch(m){}}return a?c[a]:c}}c.set=d;c.get=function(a){return e(a,!1)};c.getJSON=function(a){return e(a,
+!0)};c.remove=function(b,c){d(b,"",a(c,{expires:-1}))};c.defaults={};c.withConverter=b;return c}return b(function(){})});AiCookies=Cookies.noConflict();
+ai_check_block=function(a){if(null==a)return!0;var b=AiCookies.getJSON("aiBLOCKS");ai_debug_cookie_status="";null==b&&(b={});"undefined"!==typeof ai_delay_showing_pageviews&&(b.hasOwnProperty(a)||(b[a]={}),b[a].hasOwnProperty("d")||(b[a].d=ai_delay_showing_pageviews));if(b.hasOwnProperty(a))for(var f in b[a]){if("x"==f){var c="",d=document.querySelectorAll('span[data-ai-block="'+a+'"]')[0];"aiHash"in d.dataset&&(c=d.dataset.aiHash);d="";b[a].hasOwnProperty("h")&&(d=b[a].h);var e=new Date;e=b[a][f]-
+Math.round(e.getTime()/1E3);if(0<e&&d==c)return ai_debug_cookie_status=a="closed for "+e+" s = "+Math.round(1E4*e/3600/24)/1E4+" days",!1;ai_set_cookie(a,"x","");b[a].hasOwnProperty("i")||b[a].hasOwnProperty("c")||ai_set_cookie(a,"h","")}else if("d"==f){if(0!=b[a][f])return ai_debug_cookie_status=a="delayed for "+b[a][f]+" pageviews",!1}else if("i"==f){c="";d=document.querySelectorAll('span[data-ai-block="'+a+'"]')[0];"aiHash"in d.dataset&&(c=d.dataset.aiHash);d="";b[a].hasOwnProperty("h")&&(d=b[a].h);
+if(0==b[a][f]&&d==c)return ai_debug_cookie_status=a="max impressions reached",!1;if(0>b[a][f]&&d==c){e=new Date;e=-b[a][f]-Math.round(e.getTime()/1E3);if(0<e)return ai_debug_cookie_status=a="max imp. reached ("+Math.round(1E4*e/24/3600)/1E4+" days = "+e+" s)",!1;ai_set_cookie(a,"i","");b[a].hasOwnProperty("c")||b[a].hasOwnProperty("x")||ai_set_cookie(a,"h","")}}if("ipt"==f&&0==b[a][f]&&(e=new Date,c=Math.round(e.getTime()/1E3),e=b[a].it-c,0<e))return ai_debug_cookie_status=a="max imp. per time reached ("+
+Math.round(1E4*e/24/3600)/1E4+" days = "+e+" s)",!1;if("c"==f){c="";d=document.querySelectorAll('span[data-ai-block="'+a+'"]')[0];"aiHash"in d.dataset&&(c=d.dataset.aiHash);d="";b[a].hasOwnProperty("h")&&(d=b[a].h);if(0==b[a][f]&&d==c)return ai_debug_cookie_status=a="max clicks reached",!1;if(0>b[a][f]&&d==c){e=new Date;e=-b[a][f]-Math.round(e.getTime()/1E3);if(0<e)return ai_debug_cookie_status=a="max clicks reached ("+Math.round(1E4*e/24/3600)/1E4+" days = "+e+" s)",!1;ai_set_cookie(a,"c","");b[a].hasOwnProperty("i")||
+b[a].hasOwnProperty("x")||ai_set_cookie(a,"h","")}}if("cpt"==f&&0==b[a][f]&&(e=new Date,c=Math.round(e.getTime()/1E3),e=b[a].ct-c,0<e))return ai_debug_cookie_status=a="max clicks per time reached ("+Math.round(1E4*e/24/3600)/1E4+" days = "+e+" s)",!1}ai_debug_cookie_status="OK";return!0};
+ai_check_and_insert_block=function(a,b){if(null==a)return!0;var f=document.getElementsByClassName(b);if(f.length){f=f[0];var c=f.closest(".code-block");if(ai_check_block(a))ai_insert_code(f),c&&(c.classList.remove("ai-list-block"),c.style.visibility="",c.classList.contains("ai-remove-position")&&(c.style.position=""));else{var d=f.closest("div[data-ai]");if(null!=d&&"undefined"!=typeof d.getAttribute("data-ai")){var e=JSON.parse(b64d(d.getAttribute("data-ai")));"undefined"!==typeof e&&
+e.constructor===Array&&(e[1]="",d.setAttribute("data-ai",b64e(JSON.stringify(e))))}d=c.querySelectorAll(".ai-debug-block");c&&d.length&&(c.classList.remove("ai-list-block"),c.style.visibility="",c.classList.contains("ai-remove-position")&&(c.style.position=""))}f.classList.remove(b)}f=document.querySelectorAll("."+b+"-dbg");f=$jscomp.makeIterator(f);for(c=f.next();!c.done;c=f.next())c=c.value,c.querySelector(".ai-status").textContent=ai_debug_cookie_status,c.querySelector(".ai-cookie-data").textContent=
+ai_get_cookie_text(a),c.classList.remove(b+"-dbg")};function ai_load_cookie(){var a=AiCookies.getJSON("aiBLOCKS");null==a&&(a={});return a}function ai_get_cookie(a,b){var f="",c=ai_load_cookie();c.hasOwnProperty(a)&&c[a].hasOwnProperty(b)&&(f=c[a][b]);return f}
+function ai_set_cookie(a,b,f){var c=ai_load_cookie();if(""===f){if(c.hasOwnProperty(a)){delete c[a][b];a:{b=c[a];for(d in b)if(b.hasOwnProperty(d)){var d=!1;break a}d=!0}d&&delete c[a]}}else c.hasOwnProperty(a)||(c[a]={}),c[a][b]=f;0===Object.keys(c).length&&c.constructor===Object?AiCookies.remove("aiBLOCKS"):AiCookies.set("aiBLOCKS",c,{expires:365,path:"/"});return c}
+ai_get_cookie_text=function(a){var b=AiCookies.getJSON("aiBLOCKS");null==b&&(b={});return b.hasOwnProperty(a)?JSON.stringify(b[a]).replace(/"/g,"").replace("{","").replace("}",""):""};
+(function(d,h){"function"===typeof define&&define.amd?define(["jquery"],function(n){return h(n)}):"object"===typeof module&&module.exports?module.exports=h(require("jquery")):h(d.jQuery)})(this,function(d){(function(h){h.fn.iframeTracker=function(n){"function"==typeof n&&(n={blurCallback:n});var l=this.get();if(null===n||!1===n)h.iframeTracker.untrack(l);else if("object"==typeof n)h.iframeTracker.track(l,n);else throw Error("Wrong handler type (must be an object, or null|false to untrack)");return this};
+h.iframeTracker={focusRetriever:null,focusRetrieved:!1,handlersList:[],isIE8AndOlder:!1,init:function(){try{!0===h.browser.msie&&9>h.browser.version&&(this.isIE8AndOlder=!0)}catch(l){try{9>navigator.userAgent.match(/(msie) ([\w.]+)/i)[2]&&(this.isIE8AndOlder=!0)}catch(w){}}h(window).focus();h(window).blur(function(l){h.iframeTracker.windowLoseFocus(l)});h("body").append('<div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;" type="text" value="" id="focus_retriever" readonly="true" /></div>');
+this.focusRetriever=h("#focus_retriever");this.focusRetrieved=!1;var n=this;h(document).mousemove(function(l){!document.activeElement||"IFRAME"!==document.activeElement.tagName||document.activeElement.hasAttribute("id")&&0===h(document.activeElement).attr("id").indexOf("dsq-")||(h.iframeTracker.focusRetriever.focus(),h.iframeTracker.focusRetrieved=!0);if(document.activeElement&&"A"==document.activeElement.tagName)for(var w in n.handlersList)try{n.handlersList[w].focusCallback(document.activeElement)}catch(y){}});
+if(this.isIE8AndOlder){this.focusRetriever.blur(function(l){l.stopPropagation();l.preventDefault();h.iframeTracker.windowLoseFocus(l)});h("body").click(function(l){h(window).focus()});h("form").click(function(l){l.stopPropagation()});try{h("body").on("click","form",function(l){l.stopPropagation()})}catch(l){console.log("[iframeTracker] Please update jQuery to 1.7 or newer. (exception: "+l.message+")")}}},track:function(n,l){l.target=n;h.iframeTracker.handlersList.push(l);h(n).bind("mouseover",{handler:l},
+h.iframeTracker.mouseoverListener).bind("mouseout",{handler:l},h.iframeTracker.mouseoutListener)},untrack:function(n){if("function"!=typeof Array.prototype.filter)console.log("Your browser doesn't support Array filter, untrack disabled");else{h(n).each(function(x){h(this).unbind("mouseover",h.iframeTracker.mouseoverListener).unbind("mouseout",h.iframeTracker.mouseoutListener)});var l=function(x){return null===x?!1:!0},w;for(w in this.handlersList){for(var y in this.handlersList[w].target)-1!==h.inArray(this.handlersList[w].target[y],
+n)&&(this.handlersList[w].target[y]=null);this.handlersList[w].target=this.handlersList[w].target.filter(l);0===this.handlersList[w].target.length&&(this.handlersList[w]=null)}this.handlersList=this.handlersList.filter(l)}},mouseoverListener:function(n){n.data.handler.over=!0;try{n.data.handler.overCallback(this,n)}catch(l){}},mouseoutListener:function(n){n.data.handler.over=!1;h.iframeTracker.focusRetriever.focus();try{n.data.handler.outCallback(this,n)}catch(l){}},windowLoseFocus:function(n){for(var l in this.handlersList)if(!0===
+this.handlersList[l].over)try{this.handlersList[l].blurCallback(n)}catch(w){}}};h(document).ready(function(){h.iframeTracker.init()})})(d)});ai_tracking_finished=!1;
+jQuery(document).ready(function(d){function h(b,m,f,a,c,q,g){b=b.replace("[EVENT]",m);b=b.replace("[BLOCK_NUMBER]",f);b=b.replace("[BLOCK_NAME]",a);b=b.replace("[BLOCK_COUNTER]",c);b=b.replace("[VERSION_NUMBER]",q);b=b.replace("[VERSION_NAME]",g);b=b.replace("[BLOCK_VERSION_NUMBER]",f+(0==q?"":" - "+q));return b=b.replace("[BLOCK_VERSION_NAME]",a+(""==g?"":" - "+g))}function n(b,m,f,a,c,q,g){var e=h("Ad Inserter Pro",b,m,f,a,c,q),p=h("[EVENT]",b,m,f,a,c,q),k=h("[BLOCK_NUMBER] - [BLOCK_VERSION_NAME]",b,m,f,a,c,q);if("function"!=
+typeof ai_external_tracking_event||0!=ai_external_tracking_event({event:b,block:m,block_name:f,block_counter:a,version:c,version_name:q},e,p,k,g))"function"==typeof window.ga?(b="send","string"==typeof ai_ga_tracker_name?b=ai_ga_tracker_name+"."+b:(m=ga.getAll()[0].get("name"),"t0"!=m&&(b=m+"."+b)),ga(b,"event",{eventCategory:e,eventAction:p,eventLabel:k,nonInteraction:g})):"function"==typeof window.gtag?gtag("event","impression",{event_category:e,event_action:p,event_label:k,non_interaction:g}):
+"function"==typeof window.__gaTracker?__gaTracker("send","event",{eventCategory:e,eventAction:p,eventLabel:k,nonInteraction:g}):"object"==typeof _gaq&&_gaq.push(["_trackEvent",e,p,k,void 0,g]),"object"==typeof _paq&&_paq.push(["trackEvent",e,p,k])}function l(b,m){var f=b[0],a=b[1];if(Number.isInteger(a))if("undefined"==typeof ai_check_data&&"undefined"==typeof ai_check_data_timeout)ai_check_data_timeout=!0,setTimeout(function(){l(b,m)},2500);else{ai_cookie=ai_load_cookie();for(var c in ai_cookie)if(parseInt(f)==
+parseInt(c))for(var q in ai_cookie[c])if("c"==q){var g=ai_cookie[c][q];if(0<g)if(ai_set_cookie(c,"c",g-1),1==g){g=d("span[data-ai-block="+f+"]").data("ai-cfp-time");var e=new Date;e=Math.round(e.getTime()/1E3);var p=e+604800;ai_set_cookie(c,"c",-p);setTimeout(function(){d("span[data-ai-block="+f+"]").closest("div[data-ai]").remove()},50);"undefined"!=typeof g&&(p=e+86400*g,ai_set_cookie(f,"x",p),d("span.ai-cfp").each(function(t){t=d(this).data("ai-block");var u=d(this);setTimeout(function(){u.closest("div[data-ai]").remove()},
+50);ai_set_cookie(t,"x",p)}))}else ai_set_cookie(c,"c",g-1)}else if("cpt"==q)if(g=ai_cookie[c][q],0<g){if(ai_set_cookie(c,"cpt",g-1),1==g){g=d("span[data-ai-block="+f+"]").data("ai-cfp-time");e=new Date;e=Math.round(e.getTime()/1E3);var k=d(this);setTimeout(function(){k.closest("div[data-ai]").remove()},50);"undefined"!=typeof g&&(p=e+86400*g,ai_set_cookie(f,"x",p),d("span.ai-cfp").each(function(t){t=d(this).data("ai-block");var u=d(this);setTimeout(function(){u.closest("div[data-ai]").remove()},
+50);ai_set_cookie(t,"x",p)}))}}else ai_check_data.hasOwnProperty(c)&&ai_check_data[c].hasOwnProperty("cpt")&&ai_check_data[c].hasOwnProperty("ct")?ai_cookie.hasOwnProperty(c)&&ai_cookie[c].hasOwnProperty("ct")&&(e=new Date,0>=ai_cookie[c].ct-Math.round(e.getTime()/1E3)&&(e=Math.round(e.getTime()/1E3),ai_set_cookie(c,"cpt",ai_check_data[c].cpt-1),ai_set_cookie(c,"ct",Math.round(e+86400*ai_check_data[c].ct)))):(ai_cookie.hasOwnProperty(c)&&ai_cookie[c].hasOwnProperty("cpt")&&ai_set_cookie(c,"cpt",""),
+ai_cookie.hasOwnProperty(c)&&ai_cookie[c].hasOwnProperty("ct")&&ai_set_cookie(c,"ct",""));x&&d.ajax({url:"/wp-admin/admin-ajax.php",type:"post",data:{action:"ai_ajax",ai_check:"01c640d94c",click:f,version:a,type:m},async:!0}).done(function(t){});if(B){var v=b[2],r=b[3];n("click",f,v,b[4],a,r,!1)}"function"==typeof ai_click_action&&ai_click_action(f,v,a,r)}}function w(){ai_check_data={};if("undefined"==typeof ai_iframe){ai_cookie=ai_load_cookie();d(".ai-check-block").each(function(){var a=
+d(this).data("ai-block"),c=d(this).data("ai-delay-pv"),q=d(this).data("ai-every-pv"),g=d(this).data("ai-hash"),e=d(this).data("ai-max-imp"),p=d(this).data("ai-limit-imp-per-time"),k=d(this).data("ai-limit-imp-time"),v=d(this).data("ai-max-clicks"),r=d(this).data("ai-limit-clicks-per-time"),t=d(this).data("ai-limit-clicks-time");if("undefined"!=typeof c&&0<c){ai_check_data.hasOwnProperty(a)||(ai_check_data[a]={});ai_check_data[a].d=c;var u="";ai_cookie.hasOwnProperty(a)&&ai_cookie[a].hasOwnProperty("d")&&
+(u=ai_cookie[a].d);""===u&&ai_set_cookie(a,"d",c-1)}"undefined"!=typeof q&&2<=q&&(ai_check_data.hasOwnProperty(a)||(ai_check_data[a]={}),"undefined"!==typeof ai_delay_showing_pageviews||ai_cookie.hasOwnProperty(a)&&ai_cookie[a].hasOwnProperty("d")||(ai_cookie.hasOwnProperty(a)||(ai_cookie[a]={}),ai_cookie[a].d=0),ai_check_data[a].e=q);if("undefined"!=typeof e&&0<e){if(ai_check_data.hasOwnProperty(a)||(ai_check_data[a]={}),ai_check_data[a].i=e,ai_check_data[a].h=g,q=c="",ai_cookie.hasOwnProperty(a)&&
+(ai_cookie[a].hasOwnProperty("i")&&(q=ai_cookie[a].i),ai_cookie[a].hasOwnProperty("h")&&(c=ai_cookie[a].h)),""===q||c!=g)ai_set_cookie(a,"i",e),ai_set_cookie(a,"h",g)}else ai_cookie.hasOwnProperty(a)&&ai_cookie[a].hasOwnProperty("i")&&(ai_set_cookie(a,"i",""),ai_cookie[a].hasOwnProperty("c")||ai_cookie[a].hasOwnProperty("x")||ai_set_cookie(a,"h",""));if("undefined"!=typeof p&&0<p&&"undefined"!=typeof k&&0<k){ai_check_data.hasOwnProperty(a)||(ai_check_data[a]={});ai_check_data[a].ipt=p;ai_check_data[a].it=
+k;e=c="";ai_cookie.hasOwnProperty(a)&&(ai_cookie[a].hasOwnProperty("ipt")&&(c=ai_cookie[a].ipt),ai_cookie[a].hasOwnProperty("it")&&(e=ai_cookie[a].it));if(""===c||""===e)ai_set_cookie(a,"ipt",p),c=new Date,c=Math.round(c.getTime()/1E3),ai_set_cookie(a,"it",Math.round(c+86400*k));0<e&&(c=new Date,c=Math.round(c.getTime()/1E3),e<=c&&(ai_set_cookie(a,"ipt",p),ai_set_cookie(a,"it",Math.round(c+86400*k))))}else ai_cookie.hasOwnProperty(a)&&(ai_cookie[a].hasOwnProperty("ipt")&&ai_set_cookie(a,"ipt",""),
+ai_cookie[a].hasOwnProperty("it")&&ai_set_cookie(a,"it",""));if("undefined"!=typeof v&&0<v){if(ai_check_data.hasOwnProperty(a)||(ai_check_data[a]={}),ai_check_data[a].c=v,ai_check_data[a].h=g,p=c="",ai_cookie.hasOwnProperty(a)&&(ai_cookie[a].hasOwnProperty("c")&&(p=ai_cookie[a].c),ai_cookie[a].hasOwnProperty("h")&&(c=ai_cookie[a].h)),""===p||c!=g)ai_set_cookie(a,"c",v),ai_set_cookie(a,"h",g)}else ai_cookie.hasOwnProperty(a)&&ai_cookie[a].hasOwnProperty("c")&&(ai_set_cookie(a,"c",""),ai_cookie[a].hasOwnProperty("i")||
+ai_cookie[a].hasOwnProperty("x")||ai_set_cookie(a,"h",""));if("undefined"!=typeof r&&0<r&&"undefined"!=typeof t&&0<t){ai_check_data.hasOwnProperty(a)||(ai_check_data[a]={});ai_check_data[a].cpt=r;ai_check_data[a].ct=t;g=v="";ai_cookie.hasOwnProperty(a)&&(ai_cookie[a].hasOwnProperty("cpt")&&(v=ai_cookie[a].cpt),ai_cookie[a].hasOwnProperty("ct")&&(g=ai_cookie[a].ct));if(""===v||""===g)ai_set_cookie(a,"cpt",r),c=new Date,c=Math.round(c.getTime()/1E3),ai_set_cookie(a,"ct",Math.round(c+86400*t));0<g&&
+(c=new Date,c=Math.round(c.getTime()/1E3),g<=c&&(ai_set_cookie(a,"cpt",r),ai_set_cookie(a,"ct",Math.round(c+86400*t))))}else ai_cookie.hasOwnProperty(a)&&(ai_cookie[a].hasOwnProperty("cpt")&&ai_set_cookie(a,"cpt",""),ai_cookie[a].hasOwnProperty("ct")&&ai_set_cookie(a,"ct",""))});for(var b in ai_cookie)for(var m in ai_cookie[b])if("d"==m){var f=ai_cookie[b][m];0<f?ai_set_cookie(b,"d",f-1):ai_check_data.hasOwnProperty(b)&&ai_check_data[b].hasOwnProperty("e")?ai_set_cookie(b,"d",ai_check_data[b].e-1):
+ai_check_data.hasOwnProperty(b)&&ai_check_data[b].hasOwnProperty("d")||ai_set_cookie(b,"d","")}}}function y(){if(D){var b=document.documentElement.clientWidth,m=window.innerWidth,f=b<m?m:b,a=0;d.each(E,function(q,g){if(f>=g)return a=F[q],!1});b=jQuery(b64d("Ym9keQ==")).attr(b64d ('ZGF0YS1kYXRhLW1hc2s='));if("string"===typeof b)var c=b==b64d("bWFzaw==");"string"===typeof b&&"boolean"===typeof c&&c&&(B&&n("ad blocking",0,G[a-1],0,0,"",!0),a|=128);x&&d.ajax({url:"/wp-admin/admin-ajax.php",type:"post",
+data:{action:"ai_ajax",ai_check:"01c640d94c",views:[0],versions:[a]},async:!0}).done(function(q){})}w();ai_tracking_finished=!0;ai_process_impressions()}var x=1,B=0,D=1,C=0,E=[980,768,0],F=[1,2,3],G=JSON.parse(b64d("WyJEZXNrdG9wIiwiVGFibGV0IiwiUGhvbmUiXQ=="));Number.isInteger=Number.isInteger||function(b){return"number"===typeof b&&isFinite(b)&&Math.floor(b)===b};ai_install_standard_click_trackers=function(b){"undefined"==
+typeof b&&(b=d("body"));b=d("div.ai-track[data-ai]:visible a",b);var m=d();b.each(function(){var f=d(this).find("div.ai-lazy"),a=d(this).find("div.ai-manual");0==f.length&&0==a.length&&(m=m.add(d(this)))});b=m;b.removeClass("ai-track");0!=b.length&&(C?b.click(function(){for(var f=d(this).closest("div[data-ai]");"undefined"!=typeof f.attr("data-ai");){var a=JSON.parse(b64d(f.attr("data-ai")));"undefined"!==typeof a&&a.constructor===Array&&Number.isInteger(a[1])&&!f.hasClass("clicked")&&(f.addClass("clicked"),
+l(a,"a.click"));f=f.parent().closest("div[data-ai]")}}):b.click(function(){for(var f=d(this).closest("div[data-ai]");"undefined"!=typeof f.attr("data-ai");){var a=JSON.parse(b64d(f.attr("data-ai")));"undefined"!==typeof a&&a.constructor===Array&&Number.isInteger(a[1])&&(l(a,"a.click"),clicked=!0);f=f.parent().closest("div[data-ai]")}}))};ai_install_click_trackers=function(b){"undefined"==typeof b&&(b=d("body"));if(C){var m=d("div.ai-track[data-ai]:visible, div.ai-rotate[data-info]:visible div.ai-track[data-ai]",
+b);"undefined"!=typeof d(b).attr("data-ai")&&d(b).hasClass("ai-track")&&d(b).is(":visible")&&(m=m.add(b));var f=d();m.each(function(){var a=d(this).find("div.ai-lazy"),c=d(this).find("div.ai-manual");0==a.length&&0==c.length&&(f=f.add(d(this)))});m=f;m.removeClass("ai-track");0!=m.length&&m.iframeTracker({blurCallback:function(){if(null!=this.ai_data&&null!=wrapper&&!wrapper.hasClass("clicked")){wrapper.addClass("clicked");l(this.ai_data,"blurCallback");for(var a=wrapper.find("div[data-ai]:visible");"undefined"!=
+typeof a.attr("data-ai");){var c=JSON.parse(b64d(a.attr("data-ai")));"undefined"!==typeof c&&c.constructor===Array&&Number.isInteger(c[1])&&l(c,"blurCallback INNER");a=a.find("div[data-ai]:visible")}}},overCallback:function(a){a=d(a).closest("div[data-ai]");if("undefined"!=typeof a.attr("data-ai")){var c=JSON.parse(b64d(a.attr("data-ai")));"undefined"!==typeof c&&c.constructor===Array&&Number.isInteger(c[1])?(wrapper=a,this.ai_data=c):(null!=wrapper&&wrapper.removeClass("clicked"),this.ai_data=wrapper=
+null)}},outCallback:function(a){null!=wrapper&&wrapper.removeClass("clicked");this.ai_data=wrapper=null},focusCallback:function(a){if(null!=this.ai_data&&null!=wrapper&&!wrapper.hasClass("clicked"))for(wrapper.addClass("clicked"),l(this.ai_data,"focusCallback"),a=wrapper.find("div[data-ai]:visible");"undefined"!=typeof a.attr("data-ai");){var c=JSON.parse(b64d(a.attr("data-ai")));"undefined"!==typeof c&&c.constructor===Array&&Number.isInteger(c[1])&&l(c,"focusCallback INNER");a=a.find("div[data-ai]:visible")}},
+wrapper:null,ai_data:null,block:null,version:null})}ai_install_standard_click_trackers(b)};ai_process_impressions=function(b){"undefined"==typeof b&&(b=d("body"));var m=[],f=[],a=[],c=[],q=[],g=d("div.ai-track[data-ai]:visible, div.ai-rotate[data-info]:visible div.ai-track[data-ai]",b);"undefined"!=typeof d(b).attr("data-ai")&&d(b).hasClass("ai-track")&&d(b).is(":visible")&&(g=g.add(b));0!=g.length&&d(g).each(function(){if("undefined"!=typeof d(this).attr("data-ai")){var k=JSON.parse(b64d(d(this).attr("data-ai")));
+if("undefined"!==typeof k&&k.constructor===Array){var v=0,r=d(this).find("div.ai-rotate[data-info]");1==r.length&&(v=JSON.parse(b64d(r.data("info")))[1]);if(Number.isInteger(k[0])&&0!=k[0]&&Number.isInteger(k[1])){r=0;var t=d(this).hasClass("ai-no-tracking"),u=jQuery(b64d("Ym9keQ==")).attr(b64d ('ZGF0YS1kYXRhLW1hc2s='));if("string"===typeof u)var A=u==b64d("bWFzaw==");if("string"===typeof u&&"boolean"===typeof A){var z=d(this).outerHeight();u=d(this).find(".ai-attributes");u.length&&u.each(function(){z>=d(this).outerHeight()&&
+(z-=d(this).outerHeight())});u=d(this).find(".ai-code");u.length&&(z=0,u.each(function(){z+=d(this).outerHeight()}));A&&0===z&&(r=128)}A=d(this).find("div.ai-lazy");u=d(this).find("div.ai-manual");if(0!=A.length||0!=u.length)t=!0;if(!t)if(0==v)m.push(k[0]),f.push(k[1]|r),a.push(k[2]),c.push(k[3]),q.push(k[4]);else for(t=1;t<=v;t++)m.push(k[0]),f.push(t|r),a.push(k[2]),c.push(k[3]),q.push(k[4])}}}});ai_cookie=ai_load_cookie();for(var e in ai_cookie)if(m.includes(parseInt(e)))for(var p in ai_cookie[e])"i"==
+p?(b=ai_cookie[e][p],0<b&&(1==b?(b=new Date,b=Math.round(b.getTime()/1E3)+604800,ai_set_cookie(e,"i",-b)):ai_set_cookie(e,"i",b-1))):"ipt"==p&&(b=ai_cookie[e][p],0<b?ai_set_cookie(e,"ipt",b-1):ai_check_data.hasOwnProperty(e)&&ai_check_data[e].hasOwnProperty("ipt")&&ai_check_data[e].hasOwnProperty("it")?ai_cookie.hasOwnProperty(e)&&ai_cookie[e].hasOwnProperty("it")&&(b=new Date,0>=ai_cookie[e].it-Math.round(b.getTime()/1E3)&&(b=Math.round(b.getTime()/1E3),ai_set_cookie(e,"ipt",ai_check_data[e].ipt),
+ai_set_cookie(e,"it",Math.round(b+86400*ai_check_data[e].it)))):(ai_cookie.hasOwnProperty(e)&&ai_cookie[e].hasOwnProperty("ipt")&&ai_set_cookie(e,"ipt",""),ai_cookie.hasOwnProperty(e)&&ai_cookie[e].hasOwnProperty("it")&&ai_set_cookie(e,"it","")));if(m.length&&(x&&d.ajax({url:"/wp-admin/admin-ajax.php",type:"post",data:{action:"ai_ajax",ai_check:"01c640d94c",views:m,versions:f},async:!0}).done(function(k){k=k.trim();if(""!=k&&(k=JSON.parse(k),"undefined"!=typeof k["#"])){var v=Math.round((new Date).getTime()/
+1E3)+43200,r;for(r in k["#"])ai_cookie.hasOwnProperty(k["#"][r])&&ai_cookie[k["#"][r]].hasOwnProperty("x")||ai_set_cookie(k["#"][r],"x",v)}}),B))for(e=0;e<m.length;e++)n("impression",m[e],a[e],q[e],f[e],c[e],!0)};jQuery(window).on("load",function(){setTimeout(y,1200);setTimeout(ai_install_click_trackers,1300)})});
+
+ai_js_code = true;
+
+</script>
+
+
+
+<!--<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+-->
+
+
+<div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;" type="text" value="" id="focus_retriever" readonly="true"></div><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"><iframe id="_atssh910" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px; left: 0px;" src="./Java 8 Streams API Tutorial with Examples_files/sh.f48a1a04fe8dbf021b4cda1d.html"></iframe></div><style id="service-icons-0"></style></body><iframe id="google_esf" name="google_esf" src="./Java 8 Streams API Tutorial with Examples_files/zrt_lookup.html" data-ad-client="ca-pub-4674758778510710" style="display: none;"></iframe></html>

@@ -1,0 +1,1772 @@
+/*
+Theme Name: version0.1
+Template: twentyfourteen
+Author: javabrahman
+Version: 1.0
+Updated: 2013-12-29 21:05:37
+*/
+
+@charset "UTF-8";
+@import url('../twentyfourteen/style.css');
+
+div.background-drp {
+    border: 2px solid grey;
+    margin-top: -8px;
+    padding-top: -8px;
+}
+
+div.transbox-drp {
+    background-color: #E6E6E6;
+    border: 0 grey;
+    filter: alpha(opacity=40);
+    opacity: 0.99;
+    margin-top: -7px;
+    margin-right: 15px;
+    padding-top: -9px;
+    margin-bottom: -10px;
+    font-weight: 600;
+}
+
+div.transbox-drp p {
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 1px 2px;
+}
+
+/*changes - 24th August Start*/
+
+/*change for making posts & pages use the full page width - start*/
+
+/*site & site header have been kept at 100% i.e. the top & bottom basic frame*/
+/* everything related to the individual post contents' width has been kept at 75%. This is to give 25% of the page width to right/content sidebar*/
+.site {
+    background-color: #fff;
+    max-width: 100%;
+    position: relative;
+}
+
+.site-header {
+    background-color: #000;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 4;
+}
+
+/*Below padding reduces the empty space at the top of the content sidebar*/
+.content-sidebar {
+    padding-top: 18px;
+}
+
+aside.widget_text {
+    min-height: 250px;
+    margin-bottom: 24px;
+}
+
+.yikes-mailchimp-form-description,
+.yikes-mailchimp-form-description-2 {
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    color: maroon;
+    text-align: center;
+}
+
+/*32px in all entries below is the left margin value of all main elements in main content area*/
+.site-content .entry-header,
+.site-content .entry-content,
+.site-content .entry-summary,
+.site-content .entry-meta,
+.page-content {
+    margin: 5px 1px 1px 32px;
+    max-width: 75%;
+}
+
+.site-content .entry-header {
+    background-color: transparent;
+}
+
+.site-content .has-post-thumbnail .entry-header {
+    padding-top: 0;
+}
+
+#disqus_thread {
+    margin: 1px 1px 1px 48px;
+    max-width: 85%;
+}
+
+/*Disqus settings*/
+/*Reduces empty space in case of no disqus comments*/
+div#no-posts {
+    display: none;
+}
+
+/*Reducing space between copyright and disqus - and correcting max possible width of post*/
+article.hentry {
+    margin-bottom: 8px;
+    max-width: 1260px;
+}
+
+.site-content .entry-content {
+    margin: 1px 1px 1px 32px;
+}
+
+/*The below entry reduces space between paras*/
+.site-content .entry-content p {
+    margin-top: 0.1em;
+    margin-bottom: 1.063em;
+    padding-bottom: 1px;
+}
+
+.site-content .entry-content a#internal-link:link {
+    color: #00A7A7;
+    font-weight: 500;
+    border-bottom: 1.8px solid;
+    text-decoration: none;
+}
+
+.site-content .entry-content a#internal-link:hover {
+    color: #171772;
+    font-weight: 500;
+    background-color: #BCDEFF;
+    text-decoration: none;
+}
+
+.site-content .entry-content a#internal-link:visited {
+    color: #8F0000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.site-content .entry-content a span#tooltip-span {
+    display: none;
+    color: #000000;
+    font-size: 12px;
+    background: #FFBA7D;
+    padding: 1px 1px 1px 1px;
+    border: 3px groove #CC6600;
+    border-color: #FFAD33;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    max-width: 250px;
+    filter: alpha(opacity=59);
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.site-content .entry-content a {
+    display: inline-block;
+}
+
+.site-content .entry-content a:hover span#tooltip-span {
+    display: block;
+}
+
+
+.comment-list {
+    list-style: none;
+    margin: 0 0 2px 0;
+}
+
+.comment-reply-title {
+    font: 600 16px/1.5 Lato, sans-serif;
+    margin: 0 20% 0 0;
+    text-transform: none;
+    background-color: #E1FF86;
+}
+
+.comments-title {
+    font: 600 16px/1.5 Lato, sans-serif;
+    margin: 0 20% 0 0;
+    text-transform: none;
+    background-color: #E1FF86;
+}
+
+.comment-metadata {
+    font-size: 12px;
+    line-height: 2;
+    text-transform: Lowercase;
+}
+
+.comment-list .reply {
+    margin-top: 12px;
+}
+
+.entry-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.0909090909;
+    margin: 0 1px 0 1px;
+    text-transform: none;
+    background-color: #D6FF59;
+    text-align: center;
+}
+
+/*Css for the meta entries such as date, author name etc just below the post title - start*/
+.site-content .entry-meta {
+    background-color: #fff;
+    margin: 1px;
+    text-transform: Capitalize;
+}
+
+/*Css for the meta entries such as date, author name etc just below the post title - end*/
+/*change for making posts & pages use the full page width - end*/
+
+/*the below line hides the next & previous post links/section*/
+.nav-links {
+    display: none;
+}
+
+/*Hides the post-navigation section above Disqus which is just empty space as nav-links is already hidden*/
+.post-navigation {
+    margin: 0 auto 0;
+    max-width: 474px;
+    padding: 0 0;
+}
+
+/*CSS for 5 best book on Java 8 post start*/
+
+.intable {
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+table[id^='review-imgs'], table[id*=' review-imgs'] {
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    width: 100%;
+}
+
+table[id^='review-imgs'] > tbody > tr > td,
+table[id*=' review-imgs'] > tbody > tr > td {
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    width: 50%;
+}
+
+/*CSS for 5 best book on Java 8 post end*/
+
+/* the below css is for content-sidebar i.e. right sidebar occupy 25% of the screen width*/
+/*and condition removed below for trial -  and (orientation: portrait) */
+@media only screen and (min-device-width: 673px) and (max-device-width: 2559px) and (orientation: portrait) {
+    /* define mobile specific styles come here */
+    .content-sidebar {
+        float: left;
+        width: 25%;
+    }
+}
+
+@media only screen and (min-device-width: 450px) and (max-device-width: 672px) and (orientation: portrait) {
+    .content-sidebar {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
+
+@media only screen and (min-device-width: 2560px) and (orientation: landscape) {
+    /* define flipboard specific styles come here - based on my screen resolution 3200px X 1800 px */
+    .content-sidebar {
+        float: left;
+        width: 25%;
+    }
+}
+
+.home .post-thumbnail img {
+    display: none;
+}
+
+.content-area {
+    padding-top: 4px;
+}
+
+.content-sidebar {
+    padding-top: 40px;
+}
+
+aside#ai_widget-3 {
+    margin-bottom: 24px;
+}
+
+/*-- this is css for top posts & pages image - and works well*/
+.widgets-list-layout-links {
+    line-height: 10px;
+}
+
+/* Navigation */
+
+.site-navigation li .current_page_item > a,
+.site-navigation li .current_page_ancestor > a,
+.site-navigation li .current-menu-item > a,
+.site-navigation li .current-menu-ancestor > a {
+    color: #404040;
+    background-color: #a97323;
+    font-weight: 600;
+}
+
+/* Primary Navigation */
+
+.primary-navigation {
+    float: right;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0 1px 0 -12px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.primary-navigation .menu-toggle {
+    display: none;
+    padding: 0;
+}
+
+.primary-navigation .nav-menu {
+    border-bottom: 0;
+    display: block;
+}
+
+.primary-navigation.toggled-on {
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+    color: #e5bd80;
+}
+
+.primary-navigation li {
+    border: 0;
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    position: relative;
+}
+
+/*primary navigation a is the css for primary dropdown menu on top of the site*/
+.primary-navigation a {
+    font-size: 14px;
+    text-transform: none;
+    color: #fff;
+}
+
+
+.primary-navigation ul ul {
+    background-color: #e1b26b;
+    color: #000;
+    float: left;
+    margin: 0;
+    position: absolute;
+    top: 48px;
+    left: -999em;
+    z-index: 99999;
+}
+
+.primary-navigation li li {
+    border: 3px groove #ffbf80;
+    border-color: #994d00;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    display: block;
+    height: auto;
+    line-height: 0.8909090909;
+    color: #000;
+}
+
+.primary-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+}
+
+.primary-navigation ul ul a {
+    padding: 10px 4px;
+    white-space: normal;
+    width: 172px;
+    color: #000;
+    font-weight: 600;
+}
+
+.primary-navigation li:hover > a,
+.primary-navigation li.focus > a {
+    color: #404040;
+    background-color: #a97323;
+}
+
+.primary-navigation ul ul a:hover,
+.primary-navigation ul ul li.focus > a {
+    background-color: #e5bd80;
+    color: #000;
+    font-weight: 600;
+}
+
+.primary-navigation ul li:hover > ul,
+.primary-navigation ul li.focus > ul {
+    left: auto;
+    color: #000;
+}
+
+.primary-navigation ul ul li:hover > ul,
+.primary-navigation ul ul li.focus > ul {
+    left: 100%;
+    color: #000;
+}
+
+.primary-navigation .menu-item-has-children > a,
+.primary-navigation .page_item_has_children > a {
+    padding-right: 26px;
+}
+
+.primary-navigation .menu-item-has-children > a:after,
+.primary-navigation .page_item_has_children > a:after {
+    -webkit-font-smoothing: antialiased;
+    content: "\f502";
+    display: inline-block;
+    font: normal 8px/1 Genericons;
+    position: absolute;
+    right: 12px;
+    top: 22px;
+    vertical-align: text-bottom;
+}
+
+.primary-navigation li .menu-item-has-children > a,
+.primary-navigation li .page_item_has_children > a {
+    padding-right: 20px;
+    width: 168px;
+}
+
+.primary-navigation .menu-item-has-children li.menu-item-has-children > a:after,
+.primary-navigation .menu-item-has-children li.page_item_has_children > a:after,
+.primary-navigation .page_item_has_children li.menu-item-has-children > a:after,
+.primary-navigation .page_item_has_children li.page_item_has_children > a:after {
+    content: "\f501";
+    right: 8px;
+    top: 20px;
+}
+
+
+/*archive header is the CSS for text which is says "category archives: category name" on category listing pages*/
+.archive-header {
+    margin: 18px auto;
+    max-width: 474px;
+}
+
+/*archive title is also the css for text which is says "category archives: category name" on category listing pages*/
+.archive-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    background-color: #00FF00;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* For unordered lists and ordered lists the styling below reduces the gap above the first bullet in the list and also sets the left side margin of the list*/
+ul,
+ol {
+    /*margin-top: -0.6em;commented out 13-Nov-2016*/
+    margin-left: 0.625em;
+}
+
+/*for widgets in content sidebar - start section*/
+/* title was uppercase - removing that constraint and few other changes*/
+.content-sidebar .widget .widget-title {
+    border-top: 0 solid black;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 900;
+    margin: 0 0 12px;
+    padding-top: 2px;
+    padding-left: 2px;
+    text-transform: none;
+    text-align: center;
+    background-color: #e5bd80;
+}
+
+/*for widgets in content sidebar - end section*/
+/*For categories widget in content-sidebar*/
+.content-sidebar .widget li:hover {
+    color: black;
+    background-color: #B8FFDB;
+}
+
+.content-sidebar .widget a,
+.content-sidebar .widget a:hover {
+    color: black;
+}
+
+/*to hide the dates displayed in Related Posts - i.e. Jetpack Related Posts*/
+.jp-relatedposts-post-date {
+    display: none;
+}
+
+.fb-like span {
+    overflow: visible !important;
+    width: 450px !important;
+    margin-right: -375px;
+}
+
+/*Overrode hr element to reduce bottom margin from 23px to 2px*/
+hr {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+    height: 1px;
+    margin-bottom: 2px;
+}
+
+/*Custom defined background highlighting styles*/
+.jb-highlight-lightgreen {
+    background-color: #A3FFA3;
+    font-weight: 600;
+}
+
+.jb-highlight-lightblue {
+    background-color: #99FFCC;
+    font-weight: 600;
+}
+
+.jb-highlight-lightgrey {
+    background-color: #E8E8E8;
+    font-weight: 600;
+}
+
+.jb-highlight-lightyellow {
+    background-color: #FFFF66;
+    font-weight: 600;
+}
+
+.jb-highlight-lightorange {
+    background-color: #FFC04D;
+    font-weight: 600;
+}
+
+/*Custom defined background highlighting with bold styles*/
+.jb-highlight-lightgreen-bold {
+    background-color: #A3FFA3;
+    font-weight: 600;
+}
+
+.jb-highlight-lightblue-bold {
+    background-color: #99FFCC;
+    font-weight: 600;
+}
+
+.jb-highlight-lightgrey-bold {
+    background-color: #E8E8E8;
+    font-weight: 600;
+}
+
+.jb-highlight-lightyellow-bold {
+    background-color: #FFFF66;
+    font-weight: 600;
+}
+
+.jb-highlight-lightorange-bold {
+    background-color: #FFC04D;
+    font-weight: 600;
+}
+
+/*Custom defined background highlighting with bold styles*/
+.jb-highlight-lightgreen-bold-17 {
+    font-size: 1.063em;
+    background-color: #A3FFA3;
+    font-weight: 600;
+}
+
+.jb-highlight-lightblue-bold-17 {
+    font-size: 1.063em;
+    background-color: #99FFCC;
+    font-weight: 600;
+}
+
+.jb-highlight-lightgrey-bold-17 {
+    font-size: 1.063em;
+    background-color: #E8E8E8;
+    font-weight: 600;
+}
+
+.jb-highlight-lightyellow-bold-17 {
+    font-size: 1.063em;
+    background-color: #FFFF66;
+    font-weight: 600;
+}
+
+.jb-highlight-lightorange-bold-17 {
+    font-size: 1.063em;
+    background-color: #FFC04D;
+    font-weight: 600;
+}
+
+.jb-highlight-lightgreen-bold-18 {
+    font-size: 1.125em;
+    background-color: #A3FFA3;
+    font-weight: 600;
+}
+
+.jb-highlight-lightblue-bold-18 {
+    font-size: 1.125em;
+    background-color: #99FFCC;
+    font-weight: 600;
+}
+
+.jb-highlight-lightgrey-bold-18 {
+    font-size: 1.125em;
+    background-color: #E8E8E8;
+    font-weight: 600;
+}
+
+.jb-highlight-lightyellow-bold-18 {
+    font-size: 1.125em;
+    background-color: #FFFF66;
+    font-weight: 600;
+}
+
+.jb-highlight-lightorange-bold-18 {
+    font-size: 1.125em;
+    background-color: #FFC04D;
+    font-weight: 600;
+}
+
+.jb-highlight-lightgreen-bold-19 {
+    font-size: 1.188em;
+    background-color: #A3FFA3;
+    font-weight: 600;
+}
+
+.jb-highlight-lightblue-bold-19 {
+    font-size: 1.188em;
+    background-color: #99FFCC;
+    font-weight: 600;
+}
+
+.jb-highlight-lightgrey-bold-19 {
+    font-size: 1.188em;
+    background-color: #E8E8E8;
+    font-weight: 600;
+}
+
+.jb-highlight-lightyellow-bold-19 {
+    font-size: 1.188em;
+    background-color: #FFFF66;
+    font-weight: 600;
+}
+
+.jb-highlight-lightorange-bold-19 {
+    font-size: 1.188em;
+    background-color: #FFC04D;
+    font-weight: 600;
+}
+
+/*Request for Comments class for span*/
+.jb-request-comments-posts {
+    background-color: #99FFCC;
+    font-weight: 600;
+    font-size: 1.3em;
+    margin: 5px 1px 1px 52px;
+    max-width: 90%;
+}
+
+.jb-request-follow {
+    margin: 5px 1px 1px 0;
+    max-width: 90%;
+}
+
+code {
+    font-family: Monaco, "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    line-height: 1.5;
+}
+
+.codeblock {
+    margin: 0 1px 1px 1px;
+    font-size: 15px;
+    font-family: Monaco, Courier, "Courier New";
+}
+
+.hentry table#mytable {
+    border: none;
+    margin-top: -16px;
+}
+
+.hentry table#mytable tr {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.hentry table#mytable td {
+    border-top: 1px solid #66FFFF;
+    border-bottom: 1px solid #E0FFFF;
+    border-left: hidden;
+    border-right: hidden;
+}
+
+.hentry table#mytable td#td_image {
+    width: 76px;
+    height: 76px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hentry table#mytable td#td_description {
+    text-align: left;
+    vertical-align: top;
+}
+
+/*CSS for pre using inside shortcode box*/
+
+.for-pre-in-shortcodebox {
+    border: none;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    line-height: 16px !important;
+    overflow: hidden;
+}
+
+.for-shortcodebox {
+    font-weight: 600;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    line-height: 16px !important;
+    overflow: hidden;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+}
+
+.for-shortcodebox-lessmarginbottom {
+    font-weight: 600;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 0.3em !important;
+    line-height: 16px !important;
+    overflow: hidden;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+}
+
+/*Below css hides thumbnail on all posts*/
+.single .post-thumbnail img {
+    display: none;
+}
+
+/*Below css hides featured image in search result view*/
+.search .post-thumbnail img {
+    display: none;
+}
+
+.su-posts-default-loop h2.su-post-title {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.su-posts-default-loop h2.su-post-title {
+    clear: none;
+    margin: 0 0 0.2em 0 !important;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.su-posts-default-loop h2.su-post-title a {
+    display: inline;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-decoration: none;
+    font-size: 1.07em;
+}
+
+.su-posts-default-loop h2.su-post-title a:hover {
+    text-decoration: underline;
+    color: #60461f;
+}
+
+.su-posts-default-loop .su-post-thumbnail img {
+    border: 1px solid #d9d9d9;
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.su-posts-default-loop .su-post-excerpt {
+    margin-top: -4px;
+}
+
+.su-posts-default-loop .su-post {
+    margin-bottom: 1.9em !important;
+}
+
+/*Below css hides featured image in category archives view*/
+.category .post-thumbnail img {
+    display: none;
+}
+
+/*Below css hides featured image in tag archives view*/
+.tag .post-thumbnail img {
+    display: none;
+}
+
+.jb-font-16 {
+    font-size: 16px;
+}
+
+.jb-font-17 {
+    font-size: 17px;
+}
+
+.jb-font-18-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.jb-font-17-subtitle {
+    font-size: 17px;
+    font-weight: 400;
+    color: #111111;
+}
+
+
+.jb-font-19 {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.jb-font-30 {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.jb-servicebox {
+    background-color: #FFFFB3;
+    font-weight: 600;
+    border: 2px grey;
+    padding-right: 4px;
+}
+
+ins {
+    background: transparent;
+}
+
+.blink_me_ebook {
+    font-weight: 600;
+    color: #00e5e6;
+    animation: blinker_ebook steps(1) 3s infinite
+}
+
+
+@keyframes blinker_ebook {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+.jb-category-title {
+    margin: 16px auto;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.8;
+    margin: 0;
+    background-color: #99ff99;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.jb-category-title-header {
+    margin: 2px auto;
+    max-width: 600px;
+}
+
+.jb-ultimate-post-in-sidebar {
+    text-align: center;
+    margin: auto;
+}
+
+.jb-category-title-custom {
+    margin-top: 16px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.jb-category-descriptor {
+    background-color: #ffd699;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    margin-left: 32px;
+    margin-right: 21px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    max-width: 100%;
+}
+
+.jb-posts-loop .jb-post {
+    margin-bottom: 2.5em;
+    line-height: 1.5;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-left: 35px;
+    float: left;
+}
+
+.jb-posts-loop .jb-post-thumbnail {
+    float: left;
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin-right: 1em;
+    margin-left: 0.2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+.jb-posts-loop .jb-post-thumbnail img {
+    border: 1px solid #d9d9d9;
+    max-width: 138px;
+    max-height: 138px;
+}
+
+.jb-posts-loop h2.jb-post-title {
+    clear: none;
+    margin: 0.3em 0 0.3em 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.jb-posts-loop h2.jb-post-title a {
+    color: black;
+}
+
+.jb-posts-loop h2.jb-post-title a:hover {
+    color: maroon;
+    text-decoration: underline;
+}
+
+.jb-posts-loop .jb-post-meta {
+    margin-bottom: 0.7em;
+    font-size: 0.8em;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.jb-posts-loop .jb-post-excerpt {
+    display: none;
+}
+
+
+.nl-code {
+    font-size: 1.04em;
+    font-weight: 600;
+}
+
+.nl-code-17 {
+    font-size: 1.046em;
+    font-weight: 600;
+}
+
+.nl-code-intext {
+    font-size: 1.035em;
+    font-weight: 600;
+}
+
+.nl-code-intext-brown {
+    font-size: 1.035em;
+    font-weight: 600;
+    color: #994D00;
+}
+
+
+.heading-code {
+    font-size: 1.078em;
+    font-weight: 600;
+}
+
+.su_note_font_15 {
+    font-size: 15px;
+}
+
+.su_note_font_14 {
+    font-size: 14px;
+}
+
+ul#code-explanation {
+    margin-top: -0.8em;
+}
+
+ol#code-explanation {
+    margin-top: -0.8em;
+}
+
+ul#code-explanation-black {
+    margin-top: -0.8em !important;
+}
+
+ol#code-explanation-black {
+    margin-top: -0.8em;
+}
+
+ul#code-explanation li code {
+    font-size: 1.065em;
+    font-weight: 600;
+    color: #994D00;
+}
+
+ul#code-explanation-black li code {
+    font-size: 1.055em;
+    font-weight: 600;
+    color: #000000;
+}
+
+ol#code-explanation li code {
+    font-size: 1.065em;
+    font-weight: 600;
+    color: #994D00;
+}
+
+ol#code-explanation-black li code {
+    font-size: 1.055em;
+    font-weight: 600;
+    color: #000000;
+}
+
+/*Syntax highlighter and related su-box changes start*/
+
+.su-box-content {
+    padding-left: 1em !important;
+    padding-right: 0.6em !important;
+    padding-top: 0em !important;
+    padding-bottom: 0em !important;
+}
+
+/*.syntaxhighlighter {
+  font-size: 0.95em !important; 
+}**Find and change this setting in plugin's css file*/
+
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+    background-color: #ffe0b3 !important;
+}
+
+/*Syntax highlighter changes end*/
+
+div#horzntl {
+    overflow-x: auto;
+}
+
+.jb-sunotepromo {
+    width: 300px;
+    text-align: center;
+}
+
+div#end-links {
+    font-size: 0.95em;
+    font-weight: 300;
+    font-family: sans-serif;
+    line-height: 1.45;
+    color: black;
+}
+
+div#end-links a {
+    padding-left: 10px;
+    padding-right: 4px;
+    text-decoration: underline;
+    color: #077272;
+    font-weight: 600;
+}
+
+div#end-links a::before {
+    content: "\021AA \00009";
+    font-weight: 900;
+}
+
+div#end-links a:hover {
+    background-color: #fbd293;
+    color: #0a4f4f;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 2px;
+    text-decoration: none;
+}
+
+div#end-links sup {
+    font-weight: 300;
+}
+
+/*Custom Styles for right sidebar widgets -start*/
+.chitika32050 {
+    min-height: 52px !important;
+}
+
+.chitikaSideSlctv {
+    display: block !important;
+    margin-top: 500px;
+}
+
+.chitikaTowerCategory {
+    margin-top: -24px !important;
+    margin-bottom: 4px !important;
+}
+
+.entry-meta > span.byline {
+    display: none;
+}
+
+/*Custom Styles for right sidebar widgets -end*/
+
+/*Below style change reduces the space below paging navigation from 48px to 16px;*/
+.paging-navigation {
+    margin-bottom: 16px;
+}
+
+/*Styles overridden for phones in portrait mode - start*/
+@media only screen and (max-device-width: 380px) and (orientation: portrait) {
+
+    /*Making homepage banner visible on mobile as it hiding below menu bar*/
+    .img-homepage {
+        margin-top: 18px !important;
+    }
+
+    /*To reduce space between post title and 1st para */
+    .site-content .entry-content {
+        margin-top: -25px;
+    }
+
+    /*To hide category name on top of post title which is first occurence of div with class 'entry-meta'*/
+    .entry-meta:nth-of-type(1) {
+        display: none;
+    }
+
+    .site-content .entry-header,
+    .site-content .entry-content,
+    .site-content .entry-summary,
+    .site-content .entry-meta,
+    .page-content {
+        margin-left: 6px;
+        padding-left: 6px;
+    }
+
+    .site-content .has-post-thumbnail .entry-header {
+        padding-top: 22px;
+    }
+
+    .entry-title {
+        font-size: 24px;
+        overflow-wrap: break-word;
+        margin-top: 18px;
+    }
+
+    #disqus_thread {
+        margin-left: 12px;
+    }
+
+    .jb-request-comments-posts {
+        margin-left: 16px;
+    }
+
+    .header-main {
+        max-height: 24px;
+        margin-top: 4px;
+    }
+
+    .search-toggle {
+        max-height: 24px;
+    }
+
+    .search-toggle:before {
+        margin-top: 4px;
+    }
+
+    .home-menu-ondesktp-only {
+        display: block;
+    }
+
+
+    /*navigation menu styles for mobiles -start*/
+    .site-navigation a:hover {
+        color: #e5bd80;
+    }
+
+    ::-moz-selection {
+        background: #e5bd80;
+    }
+
+    ::selection {
+        background: #e5bd80;
+    }
+
+    .paging-navigation .page-numbers.current {
+        border-color: #e5bd80;
+    }
+
+    .contributor-posts-link:hover,
+    .button:hover,
+    .button:focus,
+    .slider-control-paging a:hover:before,
+    .search-toggle:hover,
+    .search-toggle.active,
+    .search-box,
+    .widget_calendar tbody a:hover,
+    button:hover,
+    button:focus,
+    input[type="button"]:hover,
+    input[type="button"]:focus,
+    input[type="reset"]:hover,
+    input[type="reset"]:focus,
+    input[type="submit"]:hover,
+    input[type="submit"]:focus,
+    .widget button:hover,
+    .widget .button:hover,
+    .widget button:focus,
+    .widget .button:focus,
+    .widget input[type="button"]:hover,
+    .widget input[type="button"]:focus,
+    .widget input[type="reset"]:hover,
+    .widget input[type="reset"]:focus,
+    .widget input[type="submit"]:hover,
+    .widget input[type="submit"]:focus,
+    .content-sidebar .widget input[type="button"]:hover,
+    .content-sidebar .widget input[type="button"]:focus,
+    .content-sidebar .widget input[type="reset"]:hover,
+    .content-sidebar .widget input[type="reset"]:focus,
+    .content-sidebar .widget input[type="submit"]:hover,
+    .content-sidebar .widget input[type="submit"]:focus,
+    .ie8 .primary-navigation ul ul a:hover,
+    .ie8 .primary-navigation ul ul li.focus > a,
+    .ie8 .secondary-navigation ul ul a:hover,
+    .ie8 .secondary-navigation ul ul li.focus > a {
+        background-color: #ffda9d;
+    }
+
+
+    a:active,
+    a:hover,
+    .entry-title a:hover,
+    .entry-meta a:hover,
+    .cat-links a:hover,
+    .entry-content .edit-link a:hover,
+    .post-navigation a:hover,
+    .image-navigation a:hover,
+    .comment-author a:hover,
+    .comment-list .pingback a:hover,
+    .comment-list .trackback a:hover,
+    .comment-metadata a:hover,
+    .comment-reply-title small a:hover,
+    .content-sidebar .widget a:hover,
+    .content-sidebar .widget .widget-title a:hover,
+    .content-sidebar .widget_twentyfourteen_ephemera .entry-meta a:hover {
+        color: #b28a4d;
+    }
+
+    .page-links a:hover,
+    .paging-navigation a:hover {
+        border-color: #b28a4d;
+    }
+
+    .entry-meta .tag-links a:hover:before {
+        border-right-color: #b28a4d;
+    }
+
+    .page-links a:hover,
+    .entry-meta .tag-links a:hover {
+        background-color: #b28a4d;
+    }
+
+
+    button:active,
+    .button:active,
+    .contributor-posts-link:active,
+    input[type="button"]:active,
+    input[type="reset"]:active,
+    input[type="submit"]:active,
+    .widget input[type="button"]:active,
+    .widget input[type="reset"]:active,
+    .widget input[type="submit"]:active,
+    .content-sidebar .widget input[type="button"]:active,
+    .content-sidebar .widget input[type="reset"]:active,
+    .content-sidebar .widget input[type="submit"]:active {
+        background-color: #ffeeb1;
+    }
+
+    .site-navigation .current_page_item > a,
+    .site-navigation .current_page_ancestor > a,
+    .site-navigation .current-menu-item > a,
+    .site-navigation .current-menu-ancestor > a {
+        color: #ffeeb1;
+    }
+
+    /* Higher contrast Accent Color against contrast color */
+    .site-navigation .current_page_item > a,
+    .site-navigation .current_page_ancestor > a,
+    .site-navigation .current-menu-item > a,
+    .site-navigation .current-menu-ancestor > a,
+    .site-navigation a:hover,
+    .featured-content a:hover,
+    .featured-content .entry-title a:hover,
+    .widget a:hover,
+    .widget-title a:hover,
+    .widget_twentyfourteen_ephemera .entry-meta a:hover,
+    .hentry .mejs-controls .mejs-button button:hover,
+    .site-info a:hover,
+    .featured-content a:hover {
+        color: #7d5518;
+    }
+
+    .hentry .mejs-controls .mejs-time-rail .mejs-time-current,
+    .slider-control-paging a:hover:before,
+    .slider-control-paging .slider-active:before,
+    .slider-control-paging .slider-active:hover:before {
+        background-color: #7d5518;
+    }
+
+    .primary-navigation li:hover > a,
+    .primary-navigation li.focus > a {
+        background-color: #e5bd80;
+        color: #000;
+    }
+
+    .primary-navigation.toggled-on {
+        border-bottom: 0;
+        margin: 0;
+        padding: 0;
+        color: #eed3aa;
+    }
+
+
+    .primary-navigation li .menu-item-has-children > a,
+    .primary-navigation li .page_item_has_children > a {
+        padding-right: 20px;
+        width: 122px;
+    }
+
+    .primary-navigation ul ul a {
+        padding: 8px 3px;
+        width: 124px;
+        overflow-wrap: break-word;
+    }
+
+    /*       .primary-navigation li .menu-item-has-children > a,
+       .primary-navigation li .page_item_has_children > a {
+           padding-right: 5px;
+           width: 132px;
+                   overflow-wrap: break-word;
+       }
+
+           .primary-navigation li li {
+           border: 3px groove #ffbf80;
+               border-color:#994d00;
+           -moz-border-radius:4px;
+           -webkit-border-radius:4px;
+           display: block;
+           height: auto;
+           line-height: 0.8909090909;
+           color:#000;
+                   width:132px;
+       }*/
+    /*Above commented CSS is for an attempt to reduce the size of menu items which didn't work - 27-11-2016*/
+    /*Navigation menu styles for mobiles - end*/
+    /*Optimization for mobile look and feel - start*/
+    .primary-navigation li {
+        border: 0;
+        display: inline-block;
+        height: 28px;
+        line-height: 28px;
+        position: relative;
+    }
+
+    .primary-navigation ul ul {
+        top: 28px;
+    }
+
+
+    .site-title {
+        float: left;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+        margin: 0;
+        max-width: -webkit-calc(100% - 86px);
+        max-width: calc(100% - 86px);
+    }
+
+    .site-title a {
+        text-decoration: underline;
+        color: #815718;
+    }
+
+    .header-main {
+        max-height: 20px;
+        margin-top: 2px;
+    }
+
+    .search-toggle {
+        background-color: #24890d;
+        cursor: pointer;
+        float: right;
+        height: 19px;
+        margin-right: 38px;
+        text-align: center;
+        width: 28px;
+    }
+
+
+    .search-toggle:before {
+        color: #fff;
+        content: "\f400";
+        font-size: 21px;
+        margin-top: 0;
+    }
+
+    .search-toggle:before {
+        color: #fff;
+        content: "\f400";
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    ul#primary-menu {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 2px;
+        font-weight: 600;
+    }
+
+    .blink_me_ebook {
+        padding-left: 6px;
+    }
+
+    /*category boxed divs stylized for mobile - start*/
+    .jb-posts-loop h2.jb-post-title {
+        font-size: 1.1em;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .jb-category-title-custom {
+        margin-left: 0.375em;
+        margin-right: 0.375em;
+        margin-top: 0;
+        margin-bottom: -10px;
+        font-size: 1.6em;
+        font-weight: 600;
+        line-height: 1.8;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .jb-category-descriptor {
+        font-size: 1.1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.938em;
+        margin-left: 0.375em;
+        margin-right: 0.375em;
+        padding: 0.375em;
+        max-width: 100%;
+    }
+
+    .jb-posts-loop {
+    }
+
+    .jb-posts-loop .jb-post {
+        margin-left: 4px;
+        margin-right: 4px;
+        width: 314px;
+        height: 133px;
+    }
+
+    .jb-posts-loop .jb-post-thumbnail {
+        max-width: 124px;
+        max-height: 124px;
+        margin-right: 0.8em;
+    }
+
+    .jb-posts-loop .jb-post-thumbnail img {
+        border: 1px solid #d9d9d9;
+        max-width: 128px;
+        max-height: 128px;
+    }
+
+    /*category boxed divs stylized for mobile - end*/
+    .jb-request-follow {
+        display: none;
+    }
+
+    /*intext code styles optimized for mobile -start*/
+    .nl-code {
+        font-size: 1.03em;
+        font-weight: 600;
+    }
+
+    .nl-code-17 {
+        font-size: 1.01em;
+        font-weight: 600;
+    }
+
+    .nl-code-intext {
+        font-size: 1.024em;
+        font-weight: 600;
+    }
+
+    .nl-code-intext-brown {
+        font-size: 1.024em;
+        font-weight: 600;
+        color: #994D00;
+    }
+
+    .heading-code {
+        font-size: 1.078em;
+        font-weight: 600;
+    }
+
+    ul#code-explanation li code {
+        font-size: 1.03em;
+        font-weight: 600;
+        color: #994D00;
+    }
+
+    ul#code-explanation-black li code {
+        font-size: 1.03em;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    ol#code-explanation li code {
+        font-size: 1.03em;
+        font-weight: 600;
+        color: #994D00;
+    }
+
+    ol#code-explanation-black li code {
+        font-size: 1.03em;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    /*intext - code styles optimized for mobile-end*/
+    /*Style for categories listing on mobile -start*/
+    .widget_categories li {
+        border-top: 1px solid #e5bd80;
+        padding: 8px 0 8px 8px;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    /*Style for categories listing on mobile -end*/
+    .home-menu-ondesktp-only {
+        display: none !important;
+    }
+
+    .su-posts-default-loop .su-post-excerpt {
+        margin-top: -6px;
+        line-height: 1.36;
+    }
+
+    .su-posts-default-loop .su-post-meta {
+        color: grey;
+        font-weight: 300;
+    }
+
+    .su-posts-default-loop h2.su-post-title {
+        font-size: 1.15em;
+    }
+
+    .su-posts-default-loop h2.su-post-title a {
+        text-decoration: none;
+    }
+
+    .su-posts-default-loop .su-post {
+        margin-bottom: 1.6em !important;
+    }
+
+    .comments-title {
+        font: 600 16px/1.5 Lato, sans-serif;
+        margin: 0 5px 5px 0;
+        text-align: center;
+        text-transform: none;
+        background-color: #E1FF86;
+    }
+
+
+    /*Optimization for mobile look and feel - end*/
+}
+
+/*Styles overridden for phones in portrait mode - end*/
+
+/*Below styles are for moving the menu items fully visible by shifting them to the right and for reducing the left margin and padding*/
+@media only screen and (min-device-width: 381px) and (max-device-width: 593px) {
+
+    /*category boxed divs stylized for larger mobiles - start*/
+    @media only screen and (min-device-width: 381px) and (max-device-width: 445px) {
+
+        .jb-posts-loop h2.jb-post-title {
+            font-size: 1.1em;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .jb-category-title-custom {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 2px;
+            font-size: 1.6em;
+            font-weight: 600;
+            line-height: 1.8;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .jb-category-descriptor {
+            font-size: 1.1em;
+            margin-top: 0.5em;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 8px;
+            max-width: 100%;
+        }
+
+        .jb-posts-loop {
+        }
+
+        .jb-posts-loop .jb-post {
+            margin-left: 24px;
+            margin-right: 24px;
+            width: 317px;
+            height: 134px;
+        }
+
+        .jb-posts-loop .jb-post-thumbnail {
+            max-width: 125px;
+            max-height: 125px;
+            margin-right: 14px;
+        }
+
+        .jb-posts-loop .jb-post-thumbnail img {
+            border: 1px solid #d9d9d9;
+            max-width: 129px;
+            max-height: 129px;
+        }
+    }
+    /*category boxed divs stylized for larger mobiles - end*/
+    ul#primary-menu {
+        padding-left: 10px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+    }
+
+    .blink_me_ebook {
+        padding-left: 2px;
+    }
+
+    .site-content .entry-header {
+        margin-top: 45px !important;
+    }
+
+    .site-content .has-post-thumbnail .entry-header {
+        margin-top: 45px !important;
+    }
+
+    .home-menu-ondesktp-only {
+        display: none !important;
+    }
+
+    .site-content .entry-header,
+    .site-content .entry-content,
+    .site-content .entry-summary,
+    .page-content {
+        margin-left: 8px;
+        padding-left: 8px;
+    }
+
+    #disqus_thread {
+        margin-left: 15px;
+    }
+
+    .jb-request-comments-posts {
+        margin-left: 20px;
+    }
+
+}
+
+@media only screen and (min-device-width: 594px) and (max-device-width: 672px) {
+
+    ul#primary-menu {
+        padding-left: 10px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+    }
+
+    .blink_me_ebook {
+        padding-left: 2px;
+    }
+
+    .site-content .entry-header {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-top: 45px !important;
+    }
+
+    .site-content .has-post-thumbnail .entry-header {
+        margin-top: 45px !important;
+        padding-top: 45px;
+    }
+
+    .home-menu-ondesktp-only {
+        display: none !important;
+    }
+
+    .site-content .entry-header,
+    .site-content .entry-content,
+    .site-content .entry-summary,
+    .page-content {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+
+    #disqus_thread {
+        margin-left: 18px;
+    }
+
+    .jb-request-comments-posts {
+        margin-left: 24px;
+    }
+
+}
+
+@media only screen and (min-device-width: 673px) and (max-device-width: 902px) {
+    .full-width .site-content .has-post-thumbnail .entry-header,
+    .full-width .site-content .hentry.has-post-thumbnail:first-child {
+        margin-top: 0;
+    }
+
+    .home-menu-ondesktp-only {
+        display: none !important;
+    }
+
+}
+
+/*To reduce the margin above aside in sidebar - first made for moving homepage sidebar ad up*/
+.moveUp28Pixels {
+    margin-top: -28px;
+}
+
+
